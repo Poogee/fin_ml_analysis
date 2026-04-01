@@ -1,0 +1,11 @@
+Model,vs Baseline,t-statistic,p-value,Mean Diff,Significant (5%)
+RL Full (PPO+Graph+TDA+NLP),Equal Weight,-29.1839,0.0,-0.1855,True
+RL No Graph Features,Equal Weight,-47.817,0.0,-0.5282,True
+RL No Sentiment,Equal Weight,-29.1839,0.0,-0.1855,True
+XGBoost,Equal Weight,-15.9007,0.0,-0.1278,True
+LightGBM,Equal Weight,-15.2194,0.0,-0.105,True
+LSTM,Equal Weight,-25.2265,0.0,-0.1859,True
+Transformer,Equal Weight,-26.7314,0.0,-0.2274,True
+Mean-Variance (Markowitz),Equal Weight,19.8819,0.0,0.258,True
+Risk Parity,Equal Weight,-3.4064,0.0007,-0.0355,True
+RL DQN,Equal Weight,-18.4592,0.0,-0.6665,True

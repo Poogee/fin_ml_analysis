@@ -1,0 +1,20 @@
+2026-03-24 01:05:45,642 [__main__] Building data pipeline...
+2026-03-24 01:05:45,642 [src.data.pipeline] Building data pipeline...
+2026-03-24 01:05:45,642 [src.data.loader] Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-24 01:05:46,257 [src.data.loader] Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 01:05:46,257 [src.data.loader] Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-24 01:05:46,786 [src.data.loader] Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 01:05:46,786 [src.data.loader] Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-24 01:05:47,176 [src.data.loader] Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 01:05:47,176 [src.data.loader] Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-24 01:05:47,664 [src.data.loader] Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 01:05:47,664 [src.data.pipeline] Validating data integrity...
+2026-03-24 01:05:49,279 [src.data.pipeline] 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-24 01:05:49,279 [src.data.pipeline] Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-24 01:05:49,290 [src.data.pipeline] 18 assets in prices but not in presence matrix: ['value', 'momentum', 'short_term_reversal', 'quality', 'profit_growth']...
+2026-03-24 01:05:49,291 [src.data.pipeline] Validation passed.
+2026-03-24 01:05:49,345 [src.data.pipeline] Common assets across all datasets: 10593
+2026-03-24 01:05:56,858 [src.data.universe] UniverseSelector initialized with 10593 assets
+2026-03-24 01:06:17,363 [src.data.pipeline] Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-24 01:06:17,424 [__main__] Preparing backtest data...
+2026-03-24 01:06:17,531 [__main__] Running 7 baseline models...

@@ -1,0 +1,56 @@
+2026-03-25 15:27:09,416 __main__ Loading data (n_assets=100)...
+2026-03-25 15:27:09,416 src.data.pipeline Building data pipeline...
+2026-03-25 15:27:09,416 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 15:27:10,544 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 15:27:10,544 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 15:27:11,517 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 15:27:11,517 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 15:27:11,993 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 15:27:11,993 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 15:27:12,512 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 15:27:12,513 src.data.pipeline Validating data integrity...
+2026-03-25 15:27:14,161 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 15:27:14,161 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 15:27:14,173 src.data.pipeline 18 assets in prices but not in presence matrix: ['mkt-rf', 'value', 'seasonality', 'profitability', 'short_term_reversal']...
+2026-03-25 15:27:14,173 src.data.pipeline Validation passed.
+2026-03-25 15:27:14,226 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 15:27:25,936 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 15:27:57,431 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 15:27:57,521 __main__ Intersection: 115 assets
+2026-03-25 15:27:57,842 __main__ Train: 5031 days, 115 assets
+2026-03-25 15:27:57,842 __main__ 
+▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸ PHASE 6: FULL 2M STEPS (CPU) ◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂
+2026-03-25 15:27:57,842 __main__ ============================================================
+2026-03-25 15:27:57,842 __main__ TRAINING: Full_Pipeline_2M
+2026-03-25 15:27:57,844 src.rl.train_full_pipeline Building price features...
+2026-03-25 15:27:58,173 src.rl.train_full_pipeline Computing graph/TDA features (spectral + persistent homology)...
+2026-03-25 15:35:18,168 src.rl.train_full_pipeline Graph/TDA features computed in 440.0s
+2026-03-25 15:35:18,180 src.rl.train_full_pipeline Building sentiment features...
+2026-03-25 15:35:18,180 src.data.sentiment Loading cached daily sentiment from /home/poogee/kursach_2/data/sentiment_daily.parquet
+2026-03-25 15:35:18,191 src.rl.agent Loaded sentiment: 8359 days (1997-01-03 to 2021-03-09)
+2026-03-25 15:35:36,055 src.rl.train_full_pipeline Sentiment per-asset: 2 dims
+2026-03-25 15:35:36,055 src.rl.train_full_pipeline Sentiment global: 10 dims
+2026-03-25 15:35:36,055 src.rl.train_full_pipeline Computing additional features (momentum, vol, breadth)...
+2026-03-25 15:35:39,389 src.rl.train_full_pipeline Additional features computed in 3.3s
+2026-03-25 15:35:39,414 src.rl.train_full_pipeline Feature dimensions — per-asset: 19, global: 30, obs_dim ≈ 23145
+2026-03-25 15:35:40,378 src.rl.train_full_pipeline Training FullPipelineTiltPPO (graph=True, sent=True, add=True, device=cpu) for 2000000 steps on 115 assets...
+2026-03-25 21:28:55,638 src.rl.train_full_pipeline Training complete.
+2026-03-26 02:54:49,913 __main__ Full_Pipeline_2M: 41212s | Sharpe=0.754 | Ret=94.05% | DD=33.07% | Calmar=0.429 | Sortino=0.916
+2026-03-26 02:54:51,888 __main__ Model saved to /home/poogee/kursach_2/models/Full_Pipeline_2M
+2026-03-26 02:54:51,905 __main__ 
+▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸ PHASE 7: FULL SHARPE REWARD (CPU) ◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂
+2026-03-26 02:54:51,928 __main__ ============================================================
+2026-03-26 02:54:51,928 __main__ TRAINING: Full_Sharpe_1M
+2026-03-26 02:54:52,014 src.rl.train_full_pipeline Building price features...
+2026-03-26 02:54:52,503 src.rl.train_full_pipeline Computing graph/TDA features (spectral + persistent homology)...
+2026-03-26 03:23:55,788 src.rl.train_full_pipeline Graph/TDA features computed in 1743.3s
+2026-03-26 03:23:55,804 src.rl.train_full_pipeline Building sentiment features...
+2026-03-26 03:23:55,828 src.data.sentiment Loading cached daily sentiment from /home/poogee/kursach_2/data/sentiment_daily.parquet
+2026-03-26 03:24:00,875 src.rl.agent Loaded sentiment: 8359 days (1997-01-03 to 2021-03-09)
+2026-03-26 03:24:26,695 src.rl.train_full_pipeline Sentiment per-asset: 2 dims
+2026-03-26 03:24:26,697 src.rl.train_full_pipeline Sentiment global: 10 dims
+2026-03-26 03:24:26,697 src.rl.train_full_pipeline Computing additional features (momentum, vol, breadth)...
+2026-03-26 03:24:31,597 src.rl.train_full_pipeline Additional features computed in 4.9s
+2026-03-26 03:24:31,649 src.rl.train_full_pipeline Feature dimensions — per-asset: 19, global: 30, obs_dim ≈ 23145
+2026-03-26 03:24:33,249 src.rl.train_full_pipeline Training FullPipelineTiltPPO (graph=True, sent=True, add=True, device=cpu) for 1000000 steps on 115 assets...
+2026-03-26 12:27:21,388 src.rl.train_full_pipeline Training complete.

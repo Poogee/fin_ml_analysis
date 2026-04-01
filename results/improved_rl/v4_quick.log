@@ -1,0 +1,23 @@
+2026-03-25 03:47:02,068 __main__ Loading data (n_assets=100)...
+2026-03-25 03:47:02,068 src.data.pipeline Building data pipeline...
+2026-03-25 03:47:02,068 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 03:47:02,701 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 03:47:02,701 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 03:47:03,234 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 03:47:03,234 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 03:47:03,668 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 03:47:03,668 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 03:47:04,163 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 03:47:04,163 src.data.pipeline Validating data integrity...
+2026-03-25 03:47:05,794 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 03:47:05,794 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 03:47:05,805 src.data.pipeline 18 assets in prices but not in presence matrix: ['low_risk', 'acc_rate', 'momentum', 'low_leverage', 'value']...
+2026-03-25 03:47:05,805 src.data.pipeline Validation passed.
+2026-03-25 03:47:05,857 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 03:47:13,483 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 03:47:34,131 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 03:47:34,200 __main__ Intersection universe: 115 assets (from 274 train, 142 test)
+2026-03-25 03:47:34,436 __main__ Train: 5031 days, 115 assets | Test: 1258 days, 115 assets
+2026-03-25 03:47:34,437 __main__ ============================================================
+2026-03-25 03:47:34,437 __main__ TRAINING: PPO_mw08_1M
+2026-03-25 03:47:35,550 src.rl.agent Training _Model agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...

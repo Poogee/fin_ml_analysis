@@ -1,0 +1,877 @@
+[
+  {
+    "number": 0,
+    "value": 0.27574760142817084,
+    "params": {
+      "learning_rate": 4.3284502212938785e-05,
+      "one_minus_gamma": 0.04123206532618727,
+      "clip_range": 0.1,
+      "n_steps_pow": 8,
+      "batch_size_pow": 5,
+      "n_epochs": 3,
+      "ent_coef": 0.00011364672700011186,
+      "one_minus_gae": 0.09330606024425668,
+      "vf_coef": 0.8743319806003162,
+      "max_grad_norm": 0.44863737747479326,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.12079191207885742,
+      "max_drawdown": 0.18971799314022064,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 1,
+    "value": -1.6690609054172816,
+    "params": {
+      "learning_rate": 0.00010952662748632558,
+      "one_minus_gamma": 0.0017258215396624998,
+      "clip_range": 0.3,
+      "n_steps_pow": 11,
+      "batch_size_pow": 5,
+      "n_epochs": 5,
+      "ent_coef": 0.004362599362560562,
+      "one_minus_gae": 0.014808945119975192,
+      "vf_coef": 0.29878869473895964,
+      "max_grad_norm": 0.9642198760773333,
+      "hidden_size": 64,
+      "total_timesteps": 150000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.6285701990127563,
+      "max_drawdown": 0.6440936326980591,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 2,
+    "value": -1.4557050671949898,
+    "params": {
+      "learning_rate": 1.6119044727609182e-05,
+      "one_minus_gamma": 0.0069389014127393955,
+      "clip_range": 0.2,
+      "n_steps_pow": 10,
+      "batch_size_pow": 5,
+      "n_epochs": 5,
+      "ent_coef": 0.04138851334163269,
+      "one_minus_gae": 0.05958443469672518,
+      "vf_coef": 0.9546242061731418,
+      "max_grad_norm": 0.9263791452993542,
+      "hidden_size": 128,
+      "total_timesteps": 200000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.5675555467605591,
+      "max_drawdown": 0.5921507477760315,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 3,
+    "value": -1.2739842926212082,
+    "params": {
+      "learning_rate": 4.574578205475403e-05,
+      "one_minus_gamma": 0.0028907721743726736,
+      "clip_range": 0.1,
+      "n_steps_pow": 10,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.012141307774357374,
+      "one_minus_gae": 0.01580213186410389,
+      "vf_coef": 0.2541415878427018,
+      "max_grad_norm": 0.8708229999183839,
+      "hidden_size": 256,
+      "total_timesteps": 150000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.47372865676879883,
+      "max_drawdown": 0.4966828227043152,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 4,
+    "value": -0.9397835804612826,
+    "params": {
+      "learning_rate": 0.0002926758115062131,
+      "one_minus_gamma": 0.011454201562599395,
+      "clip_range": 0.1,
+      "n_steps_pow": 9,
+      "batch_size_pow": 7,
+      "n_epochs": 5,
+      "ent_coef": 0.00021027192106506238,
+      "one_minus_gae": 0.05167075260023277,
+      "vf_coef": 0.8205887864626731,
+      "max_grad_norm": 0.6928940382986473,
+      "hidden_size": 64,
+      "total_timesteps": 250000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.4442000389099121,
+      "max_drawdown": 0.48214736580848694,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 5,
+    "value": -1.184912153617628,
+    "params": {
+      "learning_rate": 1.1308297976635991e-05,
+      "one_minus_gamma": 0.012057081573389115,
+      "clip_range": 0.3,
+      "n_steps_pow": 8,
+      "batch_size_pow": 6,
+      "n_epochs": 3,
+      "ent_coef": 0.0006053833609355686,
+      "one_minus_gae": 0.014495102383254688,
+      "vf_coef": 0.9472732392569299,
+      "max_grad_norm": 0.8656842656950918,
+      "hidden_size": 128,
+      "total_timesteps": 200000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.49727505445480347,
+      "max_drawdown": 0.5256806015968323,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 6,
+    "value": -0.8590141199269625,
+    "params": {
+      "learning_rate": 0.00023540549916739863,
+      "one_minus_gamma": 0.03329908037586663,
+      "clip_range": 0.1,
+      "n_steps_pow": 9,
+      "batch_size_pow": 7,
+      "n_epochs": 3,
+      "ent_coef": 0.0013383810441801804,
+      "one_minus_gae": 0.016676611460145475,
+      "vf_coef": 0.3398990255002621,
+      "max_grad_norm": 0.5363306199825395,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.4155871868133545,
+      "max_drawdown": 0.45859161019325256,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 7,
+    "value": -0.07696703787770422,
+    "params": {
+      "learning_rate": 0.00043168711384296114,
+      "one_minus_gamma": 0.0026777533310313258,
+      "clip_range": 0.1,
+      "n_steps_pow": 8,
+      "batch_size_pow": 6,
+      "n_epochs": 3,
+      "ent_coef": 0.028273682852605935,
+      "one_minus_gae": 0.017360486469796304,
+      "vf_coef": 0.3586711540684173,
+      "max_grad_norm": 0.642616932194294,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.06471031904220581,
+      "max_drawdown": 0.23248478770256042,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 8,
+    "value": -0.9404848879248819,
+    "params": {
+      "learning_rate": 4.215533166949115e-05,
+      "one_minus_gamma": 0.011865024511462628,
+      "clip_range": 0.1,
+      "n_steps_pow": 11,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.00674102423691786,
+      "one_minus_gae": 0.010389336884578963,
+      "vf_coef": 0.6340697937244607,
+      "max_grad_norm": 0.45854704263855656,
+      "hidden_size": 256,
+      "total_timesteps": 250000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.4193933606147766,
+      "max_drawdown": 0.4670216143131256,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 9,
+    "value": -1.3237025505904245,
+    "params": {
+      "learning_rate": 3.797182755664945e-05,
+      "one_minus_gamma": 0.0015587917868879184,
+      "clip_range": 0.1,
+      "n_steps_pow": 10,
+      "batch_size_pow": 7,
+      "n_epochs": 3,
+      "ent_coef": 0.00017835347589260713,
+      "one_minus_gae": 0.07892521215168546,
+      "vf_coef": 0.9253135428724979,
+      "max_grad_norm": 0.7431710200912875,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.5055122971534729,
+      "max_drawdown": 0.5159636735916138,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 10,
+    "value": 0.02312502076225772,
+    "params": {
+      "learning_rate": 8.73077078044857e-05,
+      "one_minus_gamma": 0.03845072704730259,
+      "clip_range": 0.2,
+      "n_steps_pow": 8,
+      "batch_size_pow": 6,
+      "n_epochs": 3,
+      "ent_coef": 0.00010986212855406446,
+      "one_minus_gae": 0.03970756686836501,
+      "vf_coef": 0.7033699697867272,
+      "max_grad_norm": 0.3086178186954562,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.011540055274963379,
+      "max_drawdown": 0.24285323917865753,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 11,
+    "value": -0.5483472140796894,
+    "params": {
+      "learning_rate": 0.00010002544034160116,
+      "one_minus_gamma": 0.049280906857438994,
+      "clip_range": 0.2,
+      "n_steps_pow": 8,
+      "batch_size_pow": 6,
+      "n_epochs": 3,
+      "ent_coef": 0.00010227296496273996,
+      "one_minus_gae": 0.032272314534068744,
+      "vf_coef": 0.6972913170901753,
+      "max_grad_norm": 0.3131879219272842,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.26087021827697754,
+      "max_drawdown": 0.3175937235355377,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 12,
+    "value": -0.6226482531308749,
+    "params": {
+      "learning_rate": 2.2570909164822985e-05,
+      "one_minus_gamma": 0.03065708402498615,
+      "clip_range": 0.2,
+      "n_steps_pow": 9,
+      "batch_size_pow": 6,
+      "n_epochs": 3,
+      "ent_coef": 0.0005120250297582433,
+      "one_minus_gae": 0.09933774318821907,
+      "vf_coef": 0.7679441387851931,
+      "max_grad_norm": 0.3131737592849248,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.28327256441116333,
+      "max_drawdown": 0.3648860454559326,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 13,
+    "value": 0.16761195156588884,
+    "params": {
+      "learning_rate": 0.000136254355432568,
+      "one_minus_gamma": 0.021573990016911276,
+      "clip_range": 0.2,
+      "n_steps_pow": 8,
+      "batch_size_pow": 5,
+      "n_epochs": 3,
+      "ent_coef": 0.00045063688308257937,
+      "one_minus_gae": 0.03577242727803139,
+      "vf_coef": 0.5396115304910807,
+      "max_grad_norm": 0.4525210432626959,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.07254576683044434,
+      "max_drawdown": 0.23484747111797333,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 14,
+    "value": 0.2779742038369499,
+    "params": {
+      "learning_rate": 0.0001885316688613296,
+      "one_minus_gamma": 0.020292205313044244,
+      "clip_range": 0.2,
+      "n_steps_pow": 8,
+      "batch_size_pow": 5,
+      "n_epochs": 3,
+      "ent_coef": 0.00047149755675596363,
+      "one_minus_gae": 0.025525514117921953,
+      "vf_coef": 0.48301706477349743,
+      "max_grad_norm": 0.4603035048912464,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.1219477653503418,
+      "max_drawdown": 0.15664729475975037,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 15,
+    "value": 0.3655377541402671,
+    "params": {
+      "learning_rate": 0.00021098456649883208,
+      "one_minus_gamma": 0.01984755039183199,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.001368025322175256,
+      "one_minus_gae": 0.02668988276105845,
+      "vf_coef": 0.48226253632699073,
+      "max_grad_norm": 0.534062747912732,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.1771019697189331,
+      "max_drawdown": 0.18538717925548553,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 16,
+    "value": -0.7011451912593265,
+    "params": {
+      "learning_rate": 0.00018378095026318328,
+      "one_minus_gamma": 0.006239651255647094,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.001464101584199406,
+      "one_minus_gae": 0.025717006971109454,
+      "vf_coef": 0.49105336668876387,
+      "max_grad_norm": 0.5879049789653259,
+      "hidden_size": 128,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.3174673914909363,
+      "max_drawdown": 0.37708672881126404,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 17,
+    "value": 0.3273404774884884,
+    "params": {
+      "learning_rate": 0.0004828694315445062,
+      "one_minus_gamma": 0.019118357399388806,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.002527606546662077,
+      "one_minus_gae": 0.02486150446881372,
+      "vf_coef": 0.47236582025789536,
+      "max_grad_norm": 0.5218346611516853,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.1532132625579834,
+      "max_drawdown": 0.18907713890075684,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 18,
+    "value": 0.18795047416605845,
+    "params": {
+      "learning_rate": 0.0004813318785773142,
+      "one_minus_gamma": 0.02027712331490698,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.002837059685861586,
+      "one_minus_gae": 0.023324947638332996,
+      "vf_coef": 0.4200284031374009,
+      "max_grad_norm": 0.5554753058621937,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.07757413387298584,
+      "max_drawdown": 0.18405914306640625,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 19,
+    "value": -0.8591425066799327,
+    "params": {
+      "learning_rate": 0.0003288394285566794,
+      "one_minus_gamma": 0.00523996494937563,
+      "clip_range": 0.3,
+      "n_steps_pow": 10,
+      "batch_size_pow": 6,
+      "n_epochs": 10,
+      "ent_coef": 0.001315136148274579,
+      "one_minus_gae": 0.010336985814593648,
+      "vf_coef": 0.5895107915786868,
+      "max_grad_norm": 0.6847595796360377,
+      "hidden_size": 128,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.375851035118103,
+      "max_drawdown": 0.42576080560684204,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 20,
+    "value": -2.100020994728462,
+    "params": {
+      "learning_rate": 0.0003534553656075415,
+      "one_minus_gamma": 0.014466032237497173,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 6,
+      "n_epochs": 10,
+      "ent_coef": 0.013482708137375224,
+      "one_minus_gae": 0.021461766673466796,
+      "vf_coef": 0.4247830258580214,
+      "max_grad_norm": 0.7671172564717148,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.6772533655166626,
+      "max_drawdown": 0.6846210956573486,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 21,
+    "value": 0.36017303885891044,
+    "params": {
+      "learning_rate": 0.00018394438733382144,
+      "one_minus_gamma": 0.02228252895351679,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0007533194754050963,
+      "one_minus_gae": 0.02520940961877177,
+      "vf_coef": 0.4910896305323681,
+      "max_grad_norm": 0.402965145842785,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.19056260585784912,
+      "max_drawdown": 0.17827312648296356,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 22,
+    "value": 0.06634718106207045,
+    "params": {
+      "learning_rate": 0.00015129167733286673,
+      "one_minus_gamma": 0.024646686216564052,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0009356620335769753,
+      "one_minus_gae": 0.041923195649324466,
+      "vf_coef": 0.5608233943404755,
+      "max_grad_norm": 0.39271052207496937,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.011721253395080566,
+      "max_drawdown": 0.19234876334667206,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 23,
+    "value": 0.10182001659869713,
+    "params": {
+      "learning_rate": 0.00024340430191672232,
+      "one_minus_gamma": 0.01598005645404669,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0021779140409028197,
+      "one_minus_gae": 0.029974345928307288,
+      "vf_coef": 0.437437837949722,
+      "max_grad_norm": 0.5145380533489241,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.03001236915588379,
+      "max_drawdown": 0.1834031641483307,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 24,
+    "value": -0.38862613943800844,
+    "params": {
+      "learning_rate": 6.578394833742175e-05,
+      "one_minus_gamma": 0.009851533314240355,
+      "clip_range": 0.3,
+      "n_steps_pow": 10,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0031755214953492995,
+      "one_minus_gae": 0.019732414304614435,
+      "vf_coef": 0.5006965069513736,
+      "max_grad_norm": 0.36939420229937897,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.20405453443527222,
+      "max_drawdown": 0.27196431159973145,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 25,
+    "value": 0.30388727511148705,
+    "params": {
+      "learning_rate": 0.0004970681331486913,
+      "one_minus_gamma": 0.02803976217050191,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.000834678719085975,
+      "one_minus_gae": 0.029531104730619716,
+      "vf_coef": 0.6375275592595921,
+      "max_grad_norm": 0.5992676202880182,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.13751792907714844,
+      "max_drawdown": 0.17092449963092804,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 26,
+    "value": -0.3452384542549328,
+    "params": {
+      "learning_rate": 0.00026417804814901316,
+      "one_minus_gamma": 0.00915281659459625,
+      "clip_range": 0.3,
+      "n_steps_pow": 10,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0052077868911478125,
+      "one_minus_gae": 0.04621682802896924,
+      "vf_coef": 0.3748506507729593,
+      "max_grad_norm": 0.5038794191497008,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.19462770223617554,
+      "max_drawdown": 0.2811000645160675,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 27,
+    "value": 0.45194008736328783,
+    "params": {
+      "learning_rate": 0.00017767286988055068,
+      "one_minus_gamma": 0.016986241307273265,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 6,
+      "n_epochs": 10,
+      "ent_coef": 0.0003057540337286385,
+      "one_minus_gae": 0.012420516295183528,
+      "vf_coef": 0.5174178598660641,
+      "max_grad_norm": 0.39687812987970894,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.2401646375656128,
+      "max_drawdown": 0.22217264771461487,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 28,
+    "value": -1.8264321949664262,
+    "params": {
+      "learning_rate": 6.159410331900676e-05,
+      "one_minus_gamma": 0.0044431798914709615,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 6,
+      "n_epochs": 10,
+      "ent_coef": 0.00022783409573901543,
+      "one_minus_gae": 0.012053457784291764,
+      "vf_coef": 0.548653737119866,
+      "max_grad_norm": 0.3813040620008577,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.6112478971481323,
+      "max_drawdown": 0.632110595703125,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 29,
+    "value": -1.2476055754264095,
+    "params": {
+      "learning_rate": 0.000145909353472035,
+      "one_minus_gamma": 0.04888210929274903,
+      "clip_range": 0.3,
+      "n_steps_pow": 10,
+      "batch_size_pow": 7,
+      "n_epochs": 5,
+      "ent_coef": 0.0002870979662218276,
+      "one_minus_gae": 0.012238688119639981,
+      "vf_coef": 0.7018512487333105,
+      "max_grad_norm": 0.40639255079955267,
+      "hidden_size": 128,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.4680478572845459,
+      "max_drawdown": 0.5032779574394226,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 30,
+    "value": 0.255102497057349,
+    "params": {
+      "learning_rate": 0.0002155321266111466,
+      "one_minus_gamma": 0.016021929454881397,
+      "clip_range": 0.3,
+      "n_steps_pow": 8,
+      "batch_size_pow": 6,
+      "n_epochs": 10,
+      "ent_coef": 0.0003271394720811016,
+      "one_minus_gae": 0.01871858052657069,
+      "vf_coef": 0.6080105297550417,
+      "max_grad_norm": 0.42217775202061936,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.10785126686096191,
+      "max_drawdown": 0.19052010774612427,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 31,
+    "value": 0.4853236295616343,
+    "params": {
+      "learning_rate": 0.0003473388501242811,
+      "one_minus_gamma": 0.01780135403357345,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0008062688765483161,
+      "one_minus_gae": 0.02363930642751214,
+      "vf_coef": 0.46830458852937334,
+      "max_grad_norm": 0.5081023636086968,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.2873948812484741,
+      "max_drawdown": 0.1817111074924469,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 32,
+    "value": -0.1609055178376979,
+    "params": {
+      "learning_rate": 0.0001271594814964095,
+      "one_minus_gamma": 0.008651391998861047,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0010184599427516758,
+      "one_minus_gae": 0.021679126350424103,
+      "vf_coef": 0.5245808509709786,
+      "max_grad_norm": 0.467577728414934,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.08240538835525513,
+      "max_drawdown": 0.22593002021312714,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 33,
+    "value": -0.27970872601935143,
+    "params": {
+      "learning_rate": 0.00038195243790754363,
+      "one_minus_gamma": 0.0010932927916845001,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 10,
+      "ent_coef": 0.0007171447430222562,
+      "one_minus_gae": 0.0340611160422383,
+      "vf_coef": 0.387670396644769,
+      "max_grad_norm": 0.5782830478264941,
+      "hidden_size": 256,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.15264302492141724,
+      "max_drawdown": 0.2740918695926666,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 34,
+    "value": 0.3406735984978963,
+    "params": {
+      "learning_rate": 0.00017788821745652898,
+      "one_minus_gamma": 0.026647058367616175,
+      "clip_range": 0.3,
+      "n_steps_pow": 9,
+      "batch_size_pow": 5,
+      "n_epochs": 5,
+      "ent_coef": 0.0018606645621623836,
+      "one_minus_gae": 0.013522068408813974,
+      "vf_coef": 0.45278640322743074,
+      "max_grad_norm": 0.34515883806795056,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.18306970596313477,
+      "max_drawdown": 0.19019274413585663,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  }
+]

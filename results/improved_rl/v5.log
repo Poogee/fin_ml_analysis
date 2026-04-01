@@ -1,0 +1,27 @@
+2026-03-25 04:42:58,934 src.data.pipeline Building data pipeline...
+2026-03-25 04:42:58,934 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 04:43:01,692 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:01,693 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 04:43:03,642 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:03,642 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 04:43:04,125 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:04,125 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 04:43:04,668 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:04,668 src.data.pipeline Validating data integrity...
+2026-03-25 04:43:06,223 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 04:43:06,224 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 04:43:06,235 src.data.pipeline 18 assets in prices but not in presence matrix: ['value', 'mkt-rf', 'quality', 'short_term_reversal', 'low_risk']...
+2026-03-25 04:43:06,235 src.data.pipeline Validation passed.
+2026-03-25 04:43:06,287 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 04:43:13,730 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 04:43:34,345 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 04:43:34,414 v5 Intersection: 115 assets
+2026-03-25 04:43:34,658 v5 Train: 5031 days, 115 assets
+2026-03-25 04:43:34,658 v5 ============================================================
+2026-03-25 04:43:34,658 v5 TRAINING: PPO_mw15_lb10_comp_1M
+2026-03-25 04:43:35,613 src.rl.agent Training PPOModel agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 05:12:24,579 src.rl.agent Training complete.
+2026-03-25 05:12:31,883 v5 PPO_mw15_lb10_comp_1M: 1737s | Sharpe=0.377 | Ret=33.1% | DD=35.4% | Calmar=0.166 | Sortino=0.462
+2026-03-25 05:12:31,891 v5 ============================================================
+2026-03-25 05:12:31,891 v5 TRAINING: PPO_mw15_lb10_sharp_1M
+2026-03-25 05:12:32,245 src.rl.agent Training PPOModel agent (PPO, reward=sharpe) for 1000000 timesteps on 115 assets...

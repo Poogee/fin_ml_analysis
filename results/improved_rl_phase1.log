@@ -1,0 +1,35 @@
+2026-03-24 22:46:31,545 __main__ Loading data pipeline (n_assets=100)...
+2026-03-24 22:46:31,546 src.data.pipeline Building data pipeline...
+2026-03-24 22:46:31,546 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-24 22:46:32,158 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 22:46:32,158 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-24 22:46:32,678 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 22:46:32,678 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-24 22:46:33,056 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 22:46:33,056 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-24 22:46:33,514 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 22:46:33,514 src.data.pipeline Validating data integrity...
+2026-03-24 22:46:35,048 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-24 22:46:35,048 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-24 22:46:35,059 src.data.pipeline 18 assets in prices but not in presence matrix: ['profitability', 'seasonality', 'size', 'investment', 'debt_issuance']...
+2026-03-24 22:46:35,059 src.data.pipeline Validation passed.
+2026-03-24 22:46:35,112 src.data.pipeline Common assets across all datasets: 10593
+2026-03-24 22:46:42,600 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-24 22:47:04,051 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-24 22:47:04,110 __main__ Train: 2000-01-01 to 2019-12-31 (5031 days, 274 assets)
+2026-03-24 22:47:04,110 __main__ Test: 2020-01-02 to 2024-12-31 (1258 days, 142 assets)
+2026-03-24 22:47:04,110 __main__ 
+======================================================================
+2026-03-24 22:47:04,110 __main__ PHASE 1: Core PPO improvements
+2026-03-24 22:47:04,110 __main__ ======================================================================
+2026-03-24 22:47:04,110 __main__ ============================================================
+2026-03-24 22:47:04,110 __main__ TRAINING: PPO_Lit_Composite_500K
+2026-03-24 22:47:15,915 src.rl.agent Computing graph/TDA features for training...
+/home/poogee/.local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/poogee/.local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+/home/poogee/.local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/poogee/.local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]

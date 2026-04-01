@@ -1,0 +1,38 @@
+2026-03-25 02:27:30,633 __main__ Loading data (n_assets=100)...
+2026-03-25 02:27:30,634 src.data.pipeline Building data pipeline...
+2026-03-25 02:27:30,634 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 02:27:31,623 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 02:27:31,623 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 02:27:32,157 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 02:27:32,157 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 02:27:32,791 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 02:27:32,791 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 02:27:33,569 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 02:27:33,569 src.data.pipeline Validating data integrity...
+2026-03-25 02:27:35,752 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 02:27:35,753 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 02:27:35,772 src.data.pipeline 18 assets in prices but not in presence matrix: ['spx-rf', 'profitability', 'profit_growth', 'low_leverage', 'accruals']...
+2026-03-25 02:27:35,772 src.data.pipeline Validation passed.
+2026-03-25 02:27:35,854 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 02:27:46,529 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 02:28:13,023 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 02:28:13,135 __main__ Intersection universe: 115 assets (from 274 train, 142 test)
+2026-03-25 02:28:13,488 __main__ Train: 5031 days, 115 assets | Test: 1258 days, 115 assets
+2026-03-25 02:28:13,488 __main__ ============================================================
+2026-03-25 02:28:13,488 __main__ TRAINING: PPO_fast_composite_500K
+2026-03-25 02:28:15,058 src.rl.agent Training _Model agent (PPO, reward=composite) for 500000 timesteps on 115 assets...
+2026-03-25 02:37:29,592 src.rl.agent Training complete.
+2026-03-25 02:37:36,653 __main__ PPO_fast_composite_500K: 563s | Sharpe=0.406 | Ret=36.62% | DD=36.27% | Calmar=0.178 | Sortino=0.486
+2026-03-25 02:37:36,657 __main__ ============================================================
+2026-03-25 02:37:36,657 __main__ TRAINING: PPO_fast_sharpe_500K
+2026-03-25 02:37:36,975 src.rl.agent Training _Model agent (PPO, reward=sharpe) for 500000 timesteps on 115 assets...
+2026-03-25 02:45:45,192 src.rl.agent Training complete.
+2026-03-25 02:45:52,293 __main__ PPO_fast_sharpe_500K: 496s | Sharpe=0.407 | Ret=37.03% | DD=35.66% | Calmar=0.183 | Sortino=0.497
+2026-03-25 02:45:52,310 __main__ ============================================================
+2026-03-25 02:45:52,310 __main__ TRAINING: PPO_lit_composite_500K
+2026-03-25 02:45:52,629 src.rl.agent Training _Model agent (PPO, reward=composite) for 500000 timesteps on 115 assets...
+2026-03-25 02:53:40,426 src.rl.agent Training complete.
+2026-03-25 02:53:47,496 __main__ PPO_lit_composite_500K: 475s | Sharpe=0.323 | Ret=25.39% | DD=35.48% | Calmar=0.131 | Sortino=0.399
+2026-03-25 02:53:47,505 __main__ ============================================================
+2026-03-25 02:53:47,505 __main__ TRAINING: SAC_composite_500K
+2026-03-25 02:53:47,997 src.rl.agent Training _Model agent (SAC, reward=composite) for 500000 timesteps on 115 assets...

@@ -1,0 +1,23 @@
+# Evaluation configuration
+# Used by src/evaluation/run_evaluation.py
+
+data:
+  train_start: "2000-01-01"
+  train_end: "2019-12-31"
+  test_start: "2020-01-02"
+  test_end: "2024-12-31"
+  n_assets: 100
+  rebalance_freq: "Q"  # Quarterly universe rebalancing
+
+backtest:
+  transaction_cost_bps: 10.0   # Round-trip transaction cost in basis points
+  slippage_bps: 5.0            # Slippage in basis points
+  rebalance_frequency: 5       # Rebalance portfolio every N trading days
+
+metrics:
+  risk_free_rate: 0.0          # Annual risk-free rate
+  rolling_sharpe_window: 63    # ~3 months rolling Sharpe window
+
+statistical_tests:
+  baseline_model: "Equal Weight"   # Model to test against
+  significance_level: 0.05         # p-value threshold

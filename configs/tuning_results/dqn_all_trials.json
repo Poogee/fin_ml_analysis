@@ -1,0 +1,807 @@
+[
+  {
+    "number": 0,
+    "value": -0.27179516999806197,
+    "params": {
+      "learning_rate": 4.3284502212938785e-05,
+      "one_minus_gamma": 0.04123206532618727,
+      "buffer_size": 53950,
+      "batch_size_pow": 7,
+      "target_update_interval": 286,
+      "exploration_fraction": 0.1467983561008608,
+      "exploration_final_eps": 0.015227525095137952,
+      "learning_starts": 3674,
+      "hidden_size": 128,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": -0.16246533393859863,
+      "max_drawdown": 0.30538684129714966,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 1,
+    "value": 0.5490459195086822,
+    "params": {
+      "learning_rate": 2.0366442026830887e-05,
+      "one_minus_gamma": 0.002049268011541736,
+      "buffer_size": 20148,
+      "batch_size_pow": 7,
+      "target_update_interval": 540,
+      "exploration_fraction": 0.1873687420594126,
+      "exploration_final_eps": 0.06506676052501416,
+      "learning_starts": 689,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.29454493522644043,
+      "max_drawdown": 0.173918679356575,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 2,
+    "value": 0.8288396256127957,
+    "params": {
+      "learning_rate": 0.0001015066704592858,
+      "one_minus_gamma": 0.0011992724522955163,
+      "buffer_size": 40508,
+      "batch_size_pow": 5,
+      "target_update_interval": 232,
+      "exploration_fraction": 0.384665661176,
+      "exploration_final_eps": 0.09690688297671035,
+      "learning_starts": 3216,
+      "hidden_size": 256,
+      "total_timesteps": 250000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.47819197177886963,
+      "max_drawdown": 0.12818866968154907,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 3,
+    "value": 0.8975049533920735,
+    "params": {
+      "learning_rate": 1.1439974749291259e-05,
+      "one_minus_gamma": 0.03506776499297219,
+      "buffer_size": 18145,
+      "batch_size_pow": 7,
+      "target_update_interval": 409,
+      "exploration_fraction": 0.2560204063533433,
+      "exploration_final_eps": 0.059203925140895175,
+      "learning_starts": 765,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5079540014266968,
+      "max_drawdown": 0.11775696277618408,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 4,
+    "value": 0.9053720867504971,
+    "params": {
+      "learning_rate": 1.4136637008121852e-05,
+      "one_minus_gamma": 0.0021526280972215283,
+      "buffer_size": 11097,
+      "batch_size_pow": 6,
+      "target_update_interval": 489,
+      "exploration_fraction": 0.1814047095321688,
+      "exploration_final_eps": 0.08458637582367365,
+      "learning_starts": 1136,
+      "hidden_size": 128,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5573689937591553,
+      "max_drawdown": 0.11743927001953125,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 5,
+    "value": 0.2337551981656756,
+    "params": {
+      "learning_rate": 0.00020512599422151375,
+      "one_minus_gamma": 0.002175764980119757,
+      "buffer_size": 10127,
+      "batch_size_pow": 8,
+      "target_update_interval": 1018,
+      "exploration_fraction": 0.3187021504122962,
+      "exploration_final_eps": 0.07941433120173512,
+      "learning_starts": 592,
+      "hidden_size": 256,
+      "total_timesteps": 300000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.10669708251953125,
+      "max_drawdown": 0.17664735019207,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 6,
+    "value": 0.06250371722325213,
+    "params": {
+      "learning_rate": 3.3755895712060835e-05,
+      "one_minus_gamma": 0.003568426123255422,
+      "buffer_size": 53654,
+      "batch_size_pow": 7,
+      "target_update_interval": 1542,
+      "exploration_fraction": 0.2416644775485848,
+      "exploration_final_eps": 0.020763482134447155,
+      "learning_starts": 2583,
+      "hidden_size": 256,
+      "total_timesteps": 250000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.009263157844543457,
+      "max_drawdown": 0.19788892567157745,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 7,
+    "value": 0.1658836535685403,
+    "params": {
+      "learning_rate": 1.1045524260304719e-05,
+      "one_minus_gamma": 0.0015251209898002925,
+      "buffer_size": 10750,
+      "batch_size_pow": 7,
+      "target_update_interval": 412,
+      "exploration_fraction": 0.25257120734941085,
+      "exploration_final_eps": 0.09168098265334837,
+      "learning_starts": 887,
+      "hidden_size": 128,
+      "total_timesteps": 100000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.06547689437866211,
+      "max_drawdown": 0.17294631898403168,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 8,
+    "value": 0.48097560016561364,
+    "params": {
+      "learning_rate": 0.00037977679442478547,
+      "one_minus_gamma": 0.02360327600127809,
+      "buffer_size": 42993,
+      "batch_size_pow": 8,
+      "target_update_interval": 1272,
+      "exploration_fraction": 0.15597101766581076,
+      "exploration_final_eps": 0.090330309864098,
+      "learning_starts": 1730,
+      "hidden_size": 128,
+      "total_timesteps": 100000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.2654752731323242,
+      "max_drawdown": 0.1819741427898407,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 9,
+    "value": 0.3168239702348812,
+    "params": {
+      "learning_rate": 0.0002453480159918335,
+      "one_minus_gamma": 0.02899715852166589,
+      "buffer_size": 10161,
+      "batch_size_pow": 7,
+      "target_update_interval": 522,
+      "exploration_fraction": 0.1666323431412191,
+      "exploration_final_eps": 0.020787883060031452,
+      "learning_starts": 1087,
+      "hidden_size": 64,
+      "total_timesteps": 300000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.15110766887664795,
+      "max_drawdown": 0.16413722932338715,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 10,
+    "value": 0.6379565549552096,
+    "params": {
+      "learning_rate": 7.459309651146722e-05,
+      "one_minus_gamma": 0.008823974290385714,
+      "buffer_size": 93226,
+      "batch_size_pow": 5,
+      "target_update_interval": 873,
+      "exploration_fraction": 0.1116175599883549,
+      "exploration_final_eps": 0.04251807967976285,
+      "learning_starts": 1368,
+      "hidden_size": 128,
+      "total_timesteps": 200000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.3672940731048584,
+      "max_drawdown": 0.1760430485010147,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 11,
+    "value": 0.7291926996941378,
+    "params": {
+      "learning_rate": 1.0201380994826457e-05,
+      "one_minus_gamma": 0.010318151110851798,
+      "buffer_size": 19599,
+      "batch_size_pow": 6,
+      "target_update_interval": 356,
+      "exploration_fraction": 0.23724733930832337,
+      "exploration_final_eps": 0.056683466043722736,
+      "learning_starts": 509,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.45113706588745117,
+      "max_drawdown": 0.15330952405929565,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 12,
+    "value": 1.0309025745057685,
+    "params": {
+      "learning_rate": 2.0810060317151663e-05,
+      "one_minus_gamma": 0.0043787632821536485,
+      "buffer_size": 16724,
+      "batch_size_pow": 6,
+      "target_update_interval": 679,
+      "exploration_fraction": 0.2958789250122936,
+      "exploration_final_eps": 0.07308061340465384,
+      "learning_starts": 1636,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.6685757637023926,
+      "max_drawdown": 0.12324728816747665,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 13,
+    "value": 0.9698502086135804,
+    "params": {
+      "learning_rate": 2.4033968383357462e-05,
+      "one_minus_gamma": 0.004799678697055282,
+      "buffer_size": 15507,
+      "batch_size_pow": 6,
+      "target_update_interval": 767,
+      "exploration_fraction": 0.31557194613395856,
+      "exploration_final_eps": 0.07519597182410175,
+      "learning_starts": 1989,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5499341487884521,
+      "max_drawdown": 0.11027231067419052,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 14,
+    "value": 0.6396909292947358,
+    "params": {
+      "learning_rate": 3.488809662214908e-05,
+      "one_minus_gamma": 0.004508343279768397,
+      "buffer_size": 25043,
+      "batch_size_pow": 6,
+      "target_update_interval": 777,
+      "exploration_fraction": 0.3213641254010753,
+      "exploration_final_eps": 0.07196070713182776,
+      "learning_starts": 2169,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.36412549018859863,
+      "max_drawdown": 0.1514589935541153,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 15,
+    "value": 0.8328795208879727,
+    "params": {
+      "learning_rate": 2.2431003046671357e-05,
+      "one_minus_gamma": 0.004435617445565818,
+      "buffer_size": 14853,
+      "batch_size_pow": 5,
+      "target_update_interval": 684,
+      "exploration_fraction": 0.32029322709984986,
+      "exploration_final_eps": 0.04073950854419432,
+      "learning_starts": 1929,
+      "hidden_size": 64,
+      "total_timesteps": 300000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5273579359054565,
+      "max_drawdown": 0.13689766824245453,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 16,
+    "value": 0.7702993467217236,
+    "params": {
+      "learning_rate": 2.1927521932513402e-05,
+      "one_minus_gamma": 0.0148503319373719,
+      "buffer_size": 27295,
+      "batch_size_pow": 6,
+      "target_update_interval": 1983,
+      "exploration_fraction": 0.376989830492348,
+      "exploration_final_eps": 0.0740244394004506,
+      "learning_starts": 4616,
+      "hidden_size": 64,
+      "total_timesteps": 200000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.45613837242126465,
+      "max_drawdown": 0.1435752958059311,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 17,
+    "value": 0.710962667829615,
+    "params": {
+      "learning_rate": 5.9429625189147085e-05,
+      "one_minus_gamma": 0.006073341327926475,
+      "buffer_size": 14603,
+      "batch_size_pow": 6,
+      "target_update_interval": 1051,
+      "exploration_fraction": 0.29710431214577293,
+      "exploration_final_eps": 0.04608696138870246,
+      "learning_starts": 1390,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.3863605260848999,
+      "max_drawdown": 0.13544893264770508,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 18,
+    "value": 0.7326194609965855,
+    "params": {
+      "learning_rate": 0.00012138695744414237,
+      "one_minus_gamma": 0.0030417213623880526,
+      "buffer_size": 13384,
+      "batch_size_pow": 5,
+      "target_update_interval": 652,
+      "exploration_fraction": 0.28649144472055865,
+      "exploration_final_eps": 0.06777578792612032,
+      "learning_starts": 2490,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.4039880037307739,
+      "max_drawdown": 0.1371772140264511,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 19,
+    "value": 0.6798929553365152,
+    "params": {
+      "learning_rate": 1.8729432915408782e-05,
+      "one_minus_gamma": 0.014559095280735748,
+      "buffer_size": 23436,
+      "batch_size_pow": 6,
+      "target_update_interval": 846,
+      "exploration_fraction": 0.3551851397923907,
+      "exploration_final_eps": 0.08332478856535809,
+      "learning_starts": 1588,
+      "hidden_size": 64,
+      "total_timesteps": 200000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.39917778968811035,
+      "max_drawdown": 0.15286369621753693,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 20,
+    "value": 0.9910022662040419,
+    "params": {
+      "learning_rate": 3.232951170419692e-05,
+      "one_minus_gamma": 0.006467923136113629,
+      "buffer_size": 34592,
+      "batch_size_pow": 5,
+      "target_update_interval": 1321,
+      "exploration_fraction": 0.21081532321593702,
+      "exploration_final_eps": 0.033052126611023934,
+      "learning_starts": 2893,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.6461085081100464,
+      "max_drawdown": 0.1423950493335724,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 21,
+    "value": 0.8303218391440929,
+    "params": {
+      "learning_rate": 3.0985544108037484e-05,
+      "one_minus_gamma": 0.006318563278845707,
+      "buffer_size": 42828,
+      "batch_size_pow": 5,
+      "target_update_interval": 1447,
+      "exploration_fraction": 0.21459988353719464,
+      "exploration_final_eps": 0.03548718277164127,
+      "learning_starts": 2974,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5089497566223145,
+      "max_drawdown": 0.15120263397693634,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 22,
+    "value": 0.7816798181704109,
+    "params": {
+      "learning_rate": 4.842438549601388e-05,
+      "one_minus_gamma": 0.007692849992739992,
+      "buffer_size": 33654,
+      "batch_size_pow": 5,
+      "target_update_interval": 1212,
+      "exploration_fraction": 0.28129276439142836,
+      "exploration_final_eps": 0.028619744720765096,
+      "learning_starts": 2142,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.4514434337615967,
+      "max_drawdown": 0.17379583418369293,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 23,
+    "value": 0.9188063914238075,
+    "params": {
+      "learning_rate": 2.782489595003922e-05,
+      "one_minus_gamma": 0.004880927814375634,
+      "buffer_size": 30251,
+      "batch_size_pow": 6,
+      "target_update_interval": 1892,
+      "exploration_fraction": 0.2112180967834701,
+      "exploration_final_eps": 0.05149309391539499,
+      "learning_starts": 4046,
+      "hidden_size": 64,
+      "total_timesteps": 300000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5221878290176392,
+      "max_drawdown": 0.1328142136335373,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 24,
+    "value": 0.6862899391422718,
+    "params": {
+      "learning_rate": 1.606403136044622e-05,
+      "one_minus_gamma": 0.013073562739627266,
+      "buffer_size": 16743,
+      "batch_size_pow": 6,
+      "target_update_interval": 968,
+      "exploration_fraction": 0.35433376223178914,
+      "exploration_final_eps": 0.06112834211659691,
+      "learning_starts": 2499,
+      "hidden_size": 64,
+      "total_timesteps": 250000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.3678179979324341,
+      "max_drawdown": 0.1416182816028595,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 25,
+    "value": 0.5445323947979738,
+    "params": {
+      "learning_rate": 4.779648619715359e-05,
+      "one_minus_gamma": 0.0031127304860023787,
+      "buffer_size": 73864,
+      "batch_size_pow": 5,
+      "target_update_interval": 736,
+      "exploration_fraction": 0.2696273366944877,
+      "exploration_final_eps": 0.07536275304357884,
+      "learning_starts": 1854,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.276386022567749,
+      "max_drawdown": 0.16582731902599335,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 26,
+    "value": 0.17077886423058836,
+    "params": {
+      "learning_rate": 2.591372400592908e-05,
+      "one_minus_gamma": 0.005911654141869938,
+      "buffer_size": 12401,
+      "batch_size_pow": 6,
+      "target_update_interval": 592,
+      "exploration_fraction": 0.21706661362050444,
+      "exploration_final_eps": 0.05165023073442594,
+      "learning_starts": 1349,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.0679011344909668,
+      "max_drawdown": 0.2020810842514038,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 27,
+    "value": 0.6134647859473178,
+    "params": {
+      "learning_rate": 7.407197799019769e-05,
+      "one_minus_gamma": 0.01097521167255168,
+      "buffer_size": 33624,
+      "batch_size_pow": 5,
+      "target_update_interval": 1550,
+      "exploration_fraction": 0.3486739148324471,
+      "exploration_final_eps": 0.030081449279087295,
+      "learning_starts": 3096,
+      "hidden_size": 64,
+      "total_timesteps": 300000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.3377645015716553,
+      "max_drawdown": 0.15095952153205872,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 28,
+    "value": 0.6778759054192839,
+    "params": {
+      "learning_rate": 1.5181192113285042e-05,
+      "one_minus_gamma": 0.003699270083184125,
+      "buffer_size": 22478,
+      "batch_size_pow": 6,
+      "target_update_interval": 1086,
+      "exploration_fraction": 0.3036712456041373,
+      "exploration_final_eps": 0.06681461156830323,
+      "learning_starts": 2090,
+      "hidden_size": 256,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.3631324768066406,
+      "max_drawdown": 0.14019836485385895,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 29,
+    "value": 0.29330187307795796,
+    "params": {
+      "learning_rate": 4.030600896938095e-05,
+      "one_minus_gamma": 0.008315195625108499,
+      "buffer_size": 61324,
+      "batch_size_pow": 7,
+      "target_update_interval": 309,
+      "exploration_fraction": 0.11466727783649613,
+      "exploration_final_eps": 0.015233313042493344,
+      "learning_starts": 3830,
+      "hidden_size": 64,
+      "total_timesteps": 400000,
+      "reward_type": "return"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.13812899589538574,
+      "max_drawdown": 0.2111545354127884,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 30,
+    "value": 0.19492624804459624,
+    "params": {
+      "learning_rate": 6.053527979291531e-05,
+      "one_minus_gamma": 0.020634949933023936,
+      "buffer_size": 16146,
+      "batch_size_pow": 5,
+      "target_update_interval": 459,
+      "exploration_fraction": 0.3373888732199308,
+      "exploration_final_eps": 0.08146451441356117,
+      "learning_starts": 1590,
+      "hidden_size": 128,
+      "total_timesteps": 400000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.08999884128570557,
+      "max_drawdown": 0.20246919989585876,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 31,
+    "value": 0.8852875729944986,
+    "params": {
+      "learning_rate": 2.7003086450086617e-05,
+      "one_minus_gamma": 0.0053659348525727235,
+      "buffer_size": 27702,
+      "batch_size_pow": 6,
+      "target_update_interval": 1949,
+      "exploration_fraction": 0.2228629993750954,
+      "exploration_final_eps": 0.05106467280223248,
+      "learning_starts": 4010,
+      "hidden_size": 64,
+      "total_timesteps": 300000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.4897136688232422,
+      "max_drawdown": 0.11710867285728455,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 32,
+    "value": 1.017187604917858,
+    "params": {
+      "learning_rate": 1.8139994640801122e-05,
+      "one_minus_gamma": 0.00455869913755857,
+      "buffer_size": 30822,
+      "batch_size_pow": 6,
+      "target_update_interval": 1753,
+      "exploration_fraction": 0.1914274457454453,
+      "exploration_final_eps": 0.04774173781402459,
+      "learning_starts": 4694,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.6748698949813843,
+      "max_drawdown": 0.12769056856632233,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 33,
+    "value": 0.9083765496637414,
+    "params": {
+      "learning_rate": 1.7482167511241097e-05,
+      "one_minus_gamma": 0.00278748491013363,
+      "buffer_size": 38125,
+      "batch_size_pow": 6,
+      "target_update_interval": 1312,
+      "exploration_fraction": 0.13218216829367527,
+      "exploration_final_eps": 0.03663606946385198,
+      "learning_starts": 4787,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.5416817665100098,
+      "max_drawdown": 0.11823313683271408,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  },
+  {
+    "number": 34,
+    "value": 0.7826406785860076,
+    "params": {
+      "learning_rate": 1.3133667152845248e-05,
+      "one_minus_gamma": 0.002533671945794104,
+      "buffer_size": 21030,
+      "batch_size_pow": 7,
+      "target_update_interval": 1712,
+      "exploration_fraction": 0.1910893253218624,
+      "exploration_final_eps": 0.0646566749973699,
+      "learning_starts": 3396,
+      "hidden_size": 64,
+      "total_timesteps": 350000,
+      "reward_type": "sharpe"
+    },
+    "user_attrs": {
+      "cumulative_return": 0.4187126159667969,
+      "max_drawdown": 0.12812480330467224,
+      "n_val_days": 1490
+    },
+    "state": "TrialState.COMPLETE"
+  }
+]

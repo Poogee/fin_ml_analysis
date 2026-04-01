@@ -1,0 +1,6 @@
+2026-03-25 11:04:04,045 src.data.pipeline Building data pipeline...
+2026-03-25 11:04:04,045 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 11:04:25,585 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:04:25,585 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 11:04:36,942 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:04:36,942 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet

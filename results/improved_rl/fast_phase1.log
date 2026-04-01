@@ -1,0 +1,71 @@
+2026-03-25 00:15:46,099 __main__ Loading data (n_assets=30)...
+2026-03-25 00:15:46,099 src.data.pipeline Building data pipeline...
+2026-03-25 00:15:46,099 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 00:15:46,739 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 00:15:46,739 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 00:15:47,292 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 00:15:47,292 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 00:15:47,720 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 00:15:47,720 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 00:15:48,206 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 00:15:48,206 src.data.pipeline Validating data integrity...
+2026-03-25 00:15:49,932 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 00:15:49,932 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 00:15:49,943 src.data.pipeline 18 assets in prices but not in presence matrix: ['profit_growth', 'low_leverage', 'short_term_reversal', 'quality', 'size']...
+2026-03-25 00:15:49,943 src.data.pipeline Validation passed.
+2026-03-25 00:15:49,997 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 00:15:57,761 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 00:16:18,798 src.data.pipeline Pipeline complete — train: 5031 days, 75 assets; test: 1258 days, 45 assets
+2026-03-25 00:16:18,869 __main__ Filtering both splits to 86 common universe assets (from 10593 train cols, 10593 test cols)
+2026-03-25 00:16:19,107 __main__ Train: 5031 days, 86 assets | Test: 1258 days, 86 assets
+2026-03-25 00:16:19,107 __main__ 
+======================================================================
+2026-03-25 00:16:19,107 __main__ PHASE 1: PPO config sweep (no graph/TDA — fast)
+2026-03-25 00:16:19,107 __main__ ======================================================================
+2026-03-25 00:16:19,107 __main__ ============================================================
+2026-03-25 00:16:19,107 __main__ TRAINING: PPO_lit_composite
+2026-03-25 00:16:20,132 src.rl.agent Training FastPPO agent (PPO, reward=composite) for 200000 timesteps on 86 assets...
+2026-03-25 00:23:54,710 src.rl.agent Training complete.
+2026-03-25 00:24:01,049 __main__ PPO_lit_composite: 462s | Sharpe=0.536 | Ret=57.54% | DD=30.69% | Calmar=0.311
+2026-03-25 00:24:01,076 __main__ ============================================================
+2026-03-25 00:24:01,076 __main__ TRAINING: PPO_lit_dsr
+2026-03-25 00:24:01,419 src.rl.agent Training FastPPO agent (PPO, reward=dsr) for 200000 timesteps on 86 assets...
+2026-03-25 00:31:31,662 src.rl.agent Training complete.
+2026-03-25 00:31:37,958 __main__ PPO_lit_dsr: 457s | Sharpe=0.535 | Ret=60.06% | DD=38.62% | Calmar=0.256
+2026-03-25 00:31:37,975 __main__ ============================================================
+2026-03-25 00:31:37,975 __main__ TRAINING: PPO_lit_sharpe
+2026-03-25 00:31:38,287 src.rl.agent Training FastPPO agent (PPO, reward=sharpe) for 200000 timesteps on 86 assets...
+2026-03-25 00:39:29,902 src.rl.agent Training complete.
+2026-03-25 00:39:36,390 __main__ PPO_lit_sharpe: 478s | Sharpe=0.624 | Ret=72.60% | DD=32.24% | Calmar=0.358
+2026-03-25 00:39:36,405 __main__ ============================================================
+2026-03-25 00:39:36,405 __main__ TRAINING: PPO_lit_return
+2026-03-25 00:39:36,716 src.rl.agent Training FastPPO agent (PPO, reward=return) for 200000 timesteps on 86 assets...
+2026-03-25 00:47:12,057 src.rl.agent Training complete.
+2026-03-25 00:47:18,735 __main__ PPO_lit_return: 462s | Sharpe=0.512 | Ret=54.72% | DD=32.92% | Calmar=0.278
+2026-03-25 00:47:18,755 __main__ ============================================================
+2026-03-25 00:47:18,755 __main__ TRAINING: PPO_optuna_composite
+2026-03-25 00:47:19,073 src.rl.agent Training FastPPO agent (PPO, reward=composite) for 200000 timesteps on 86 assets...
+2026-03-25 01:01:22,814 src.rl.agent Training complete.
+2026-03-25 01:01:29,167 __main__ PPO_optuna_composite: 850s | Sharpe=0.683 | Ret=83.26% | DD=29.17% | Calmar=0.442
+2026-03-25 01:01:29,177 __main__ ============================================================
+2026-03-25 01:01:29,177 __main__ TRAINING: PPO_hybrid
+2026-03-25 01:01:29,494 src.rl.agent Training FastPPO agent (PPO, reward=composite) for 200000 timesteps on 86 assets...
+2026-03-25 01:11:15,997 src.rl.agent Training complete.
+2026-03-25 01:11:22,433 __main__ PPO_hybrid: 593s | Sharpe=0.604 | Ret=69.36% | DD=32.45% | Calmar=0.343
+2026-03-25 01:11:22,437 __main__ Summary saved to /home/poogee/kursach_2/results/improved_rl/fast_summary.csv
+
+=====================================================================================
+IMPROVED RL — RESULTS SUMMARY
+=====================================================================================
+Model                          |  Sharpe |    Return |    MaxDD |  Calmar | Sortino
+-------------------------------------------------------------------------------------
+  PPO_optuna_composite         |   0.683 |    83.26% |   29.17% |   0.442 |   0.878
+  PPO_lit_sharpe               |   0.624 |    72.60% |   32.24% |   0.358 |   0.771
+  PPO_hybrid                   |   0.604 |    69.36% |   32.45% |   0.343 |   0.753
+  PPO_lit_composite            |   0.536 |    57.54% |   30.69% |   0.311 |   0.688
+  PPO_lit_dsr                  |   0.535 |    60.06% |   38.62% |   0.256 |   0.664
+  PPO_lit_return               |   0.512 |    54.72% |   32.92% |   0.278 |   0.636
+=====================================================================================
+
+Best: PPO_optuna_composite — Sharpe 0.683
+Gap to target: 0.207

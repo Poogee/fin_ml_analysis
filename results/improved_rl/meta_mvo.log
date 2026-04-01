@@ -1,0 +1,17 @@
+2026-03-25 11:03:38,047 __main__ Loading data (n_assets=100)...
+2026-03-25 11:03:38,047 src.data.pipeline Building data pipeline...
+2026-03-25 11:03:38,047 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 11:03:39,929 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:03:39,929 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 11:03:44,137 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:03:44,137 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 11:03:44,924 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:03:44,924 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 11:03:45,803 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 11:03:45,803 src.data.pipeline Validating data integrity...
+2026-03-25 11:03:48,668 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 11:03:48,668 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 11:03:48,682 src.data.pipeline 18 assets in prices but not in presence matrix: ['spx', 'value', 'investment', 'acc_rate', 'profit_growth']...
+2026-03-25 11:03:48,682 src.data.pipeline Validation passed.
+2026-03-25 11:03:48,751 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 11:04:01,624 src.data.universe UniverseSelector initialized with 10593 assets

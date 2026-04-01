@@ -1,0 +1,31 @@
+2026-03-24 12:45:20,511 __main__ Loading data pipeline (n_assets=100)...
+2026-03-24 12:45:20,511 src.data.pipeline Building data pipeline...
+2026-03-24 12:45:20,511 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-24 12:45:21,122 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 12:45:21,122 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-24 12:45:21,652 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 12:45:21,653 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-24 12:45:22,061 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 12:45:22,061 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-24 12:45:22,555 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-24 12:45:22,555 src.data.pipeline Validating data integrity...
+2026-03-24 12:45:24,219 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-24 12:45:24,219 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-24 12:45:24,231 src.data.pipeline 18 assets in prices but not in presence matrix: ['low_risk', 'short_term_reversal', 'spx-rf', 'profitability', 'acc_rate']...
+2026-03-24 12:45:24,231 src.data.pipeline Validation passed.
+2026-03-24 12:45:24,285 src.data.pipeline Common assets across all datasets: 10593
+2026-03-24 12:45:32,452 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-24 12:45:53,686 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-24 12:45:53,745 __main__ Universe assets for training: 274
+2026-03-24 12:45:53,746 __main__ Subsampled to 50 assets for tuning
+2026-03-24 12:45:53,747 __main__ Train subset: 3521 days, Validation subset: 1510 days, Assets: 50
+2026-03-24 12:45:53,934 __main__ ============================================================
+2026-03-24 12:45:53,934 __main__ Starting PPO hyperparameter tuning (35 trials)
+2026-03-24 12:45:53,934 __main__ ============================================================
+[I 2026-03-24 12:45:53,935] A new study created in memory with name: PPO_portfolio_tuning
+  0%|          | 0/35 [00:00<?, ?it/s]/home/poogee/.local/lib/python3.12/site-packages/stable_baselines3/common/utils.py:195: UserWarning: get_linear_fn() is deprecated, please use LinearSchedule() instead
+  warnings.warn("get_linear_fn() is deprecated, please use LinearSchedule() instead")
+2026-03-24 12:53:18,774 __main__ Trial 0: Sharpe=-4.252, CumRet=-90.29%, MaxDD=90.27% (timesteps=250000)
+                                        0%|          | 0/35 [07:24<?, ?it/s]Best trial: 0. Best value: -4.25186:   0%|          | 0/35 [07:24<?, ?it/s]Best trial: 0. Best value: -4.25186:   3%|▎         | 1/35 [07:24<4:12:04, 444.84s/it]2026-03-24 13:00:41,697 __main__ Trial 1: Sharpe=-3.666, CumRet=-85.34%, MaxDD=85.42% (timesteps=250000)
+                                                                                      Best trial: 0. Best value: -4.25186:   3%|▎         | 1/35 [14:47<4:12:04, 444.84s/it]Best trial: 1. Best value: -3.6659:   3%|▎         | 1/35 [14:47<4:12:04, 444.84s/it] Best trial: 1. Best value: -3.6659:   6%|▌         | 2/35 [14:47<4:04:06, 443.83s/it]2026-03-24 13:03:40,805 __main__ Trial 2: Sharpe=-3.884, CumRet=-88.06%, MaxDD=88.01% (timesteps=250000)
+                                                                                     Best trial: 1. Best value: -3.6659:   6%|▌         | 2/35 [17:46<4:04:06, 443.83s/it]Best trial: 1. Best value: -3.6659:   6%|▌         | 2/35 [17:46<4:04:06, 443.83s/it]Best trial: 1. Best value: -3.6659:   9%|▊         | 3/35 [17:46<2:52:11, 322.86s/it]

@@ -1,0 +1,241 @@
+2026-03-25 22:04:54,235 __main__ Loading data...
+2026-03-25 22:04:54,235 src.data.pipeline Building data pipeline...
+2026-03-25 22:04:54,235 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 22:04:55,267 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 22:04:55,267 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 22:04:56,223 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 22:04:56,226 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 22:04:57,025 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 22:04:57,026 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 22:04:57,821 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 22:04:57,821 src.data.pipeline Validating data integrity...
+2026-03-25 22:04:59,811 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 22:04:59,811 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 22:04:59,828 src.data.pipeline 18 assets in prices but not in presence matrix: ['investment', 'short_term_reversal', 'acc_rate', 'accruals', 'spx-rf']...
+2026-03-25 22:04:59,828 src.data.pipeline Validation passed.
+2026-03-25 22:04:59,895 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 22:06:34,094 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 22:06:57,510 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 22:06:57,591 __main__ Intersection: 115 assets
+2026-03-25 22:06:57,889 __main__ Train: 5031 days, 115 assets
+2026-03-25 22:06:57,889 __main__ 
+▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸▸ PHASE 1: AGGRESSIVE TILT ◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂◂
+2026-03-25 22:06:57,889 __main__ ============================================================
+2026-03-25 22:06:57,889 __main__ TRAINING: AggressiveTilt_ts0.8_1M
+2026-03-25 22:06:58,256 src.rl.agent Computing graph/TDA features for training...
+2026-03-25 22:41:06,327 src.rl.agent Building sentiment features for training...
+2026-03-25 22:41:06,327 src.data.sentiment Loading cached daily sentiment from /home/poogee/kursach_2/data/sentiment_daily.parquet
+2026-03-25 22:41:06,330 src.rl.agent Loaded market sentiment: 8359 days (1997-01-03 to 2021-03-09)
+2026-03-25 22:41:06,330 src.data.sentiment Loading cached per-ticker sentiment from /home/poogee/kursach_2/data/sentiment_per_ticker.parquet
+2026-03-25 22:41:06,572 src.rl.agent Loaded per-ticker sentiment: 1285523 rows, 5486 PERMNOs
+2026-03-25 22:41:22,722 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-25 22:41:22,745 src.rl.agent Sentiment per-asset features added: 6 dims
+2026-03-25 22:41:22,746 src.rl.agent Sentiment global features added: 10 dims
+2026-03-25 22:41:27,255 src.rl.agent Training AggressiveTiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-26 08:10:26,868 src.rl.agent Training complete.
+2026-03-26 08:11:42,753 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:13:13,876 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:14:31,956 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:15:44,512 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:17:00,549 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:18:11,649 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:19:34,978 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:20:57,865 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:22:11,870 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:23:54,270 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:25:37,854 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:27:04,019 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:28:32,909 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:30:00,333 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:31:43,728 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:33:14,849 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:34:52,693 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:36:09,642 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:37:38,527 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:39:13,892 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:40:26,324 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:41:56,111 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:43:29,067 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:44:55,675 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:46:16,833 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:47:49,756 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:49:10,815 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:50:50,398 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:52:16,931 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:53:52,429 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:55:19,012 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:56:49,576 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:58:08,367 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 08:59:27,881 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:00:59,212 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:02:27,735 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:03:45,910 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:05:23,317 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:07:05,868 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:08:34,882 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:10:21,801 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:11:50,715 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:13:11,792 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:14:44,219 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:16:09,324 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:17:46,085 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:19:21,185 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:20:56,097 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:22:29,205 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:23:52,563 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:25:23,526 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:26:43,447 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:28:10,431 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:29:46,032 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:31:01,257 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:32:17,809 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:33:54,898 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:35:29,057 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:36:51,855 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:38:25,609 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:39:55,257 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:41:25,632 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:42:52,492 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:44:08,700 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:45:39,215 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:47:01,323 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:48:18,663 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:49:57,371 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:51:23,722 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:53:02,024 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:54:44,502 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:56:11,930 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:57:55,012 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 09:59:29,794 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:01:01,830 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:02:44,749 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:04:01,880 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:05:27,712 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:06:59,426 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:08:18,207 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:09:37,535 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:11:03,259 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:12:29,296 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:13:56,719 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:15:16,856 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:16:41,693 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:18:07,406 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:19:32,701 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:21:14,546 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:22:43,999 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:24:28,807 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:26:08,630 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:27:40,621 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:29:16,804 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:30:36,110 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:32:06,262 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:33:25,745 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:34:52,371 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:36:13,417 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:37:40,154 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:39:03,750 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:40:24,224 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:41:57,745 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:43:22,467 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:44:41,231 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:46:08,987 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:47:35,756 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:49:02,129 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:50:45,144 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:52:22,892 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:53:57,998 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:55:19,241 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:56:45,612 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:58:13,308 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 10:59:35,806 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:01:06,831 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:02:35,565 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:04:00,620 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:05:13,871 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:07:01,168 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:08:46,646 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:10:02,013 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:11:39,238 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:13:24,253 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:14:39,945 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:16:09,452 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:17:39,119 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:19:08,035 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:20:54,193 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:22:43,538 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:24:17,455 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:25:40,667 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:27:19,675 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:29:01,087 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:30:41,193 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:32:08,442 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:33:51,724 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:35:21,058 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:36:55,680 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:38:23,900 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:40:09,530 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:41:51,254 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:43:22,922 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:45:00,298 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:46:41,814 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:48:25,552 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:50:10,179 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:51:53,119 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:53:39,134 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:55:19,814 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:56:58,471 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 11:58:47,900 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:00:29,144 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:02:12,905 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:03:59,509 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:05:34,376 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:07:26,417 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:09:10,766 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:10:49,486 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:12:25,095 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:14:09,949 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:15:50,778 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:17:34,568 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:19:14,137 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:20:38,163 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:22:21,797 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:23:57,725 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:25:26,153 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:27:14,987 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:29:06,014 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:30:55,133 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:32:38,815 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:34:33,685 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:36:29,031 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:38:20,278 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:40:11,315 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:41:51,023 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:43:43,352 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:45:35,453 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:47:31,498 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:49:27,031 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:51:15,093 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:53:07,312 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:55:00,288 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:56:48,477 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 12:58:38,878 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:00:26,794 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:02:05,480 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:03:43,031 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:05:14,197 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:07:05,940 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:08:55,993 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:10:45,340 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:12:31,418 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:14:23,663 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:16:12,102 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:18:04,771 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:19:52,526 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:21:40,893 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:23:37,341 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:25:23,699 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:27:13,610 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:28:59,706 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:30:51,584 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:32:50,746 src.features.sentiment Using per-ticker sentiment: 6 features per asset
+2026-03-26 13:34:45,819 src.features.sentiment Using per-ticker sentiment: 6 features per asset

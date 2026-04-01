@@ -1,0 +1,27 @@
+2026-03-25 04:43:30,830 src.data.pipeline Building data pipeline...
+2026-03-25 04:43:30,831 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 04:43:31,440 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:31,440 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 04:43:31,968 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:31,968 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 04:43:32,362 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:32,363 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 04:43:32,839 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 04:43:32,839 src.data.pipeline Validating data integrity...
+2026-03-25 04:43:34,429 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 04:43:34,429 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 04:43:34,440 src.data.pipeline 18 assets in prices but not in presence matrix: ['spx', 'short_term_reversal', 'seasonality', 'acc_rate', 'debt_issuance']...
+2026-03-25 04:43:34,440 src.data.pipeline Validation passed.
+2026-03-25 04:43:34,493 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 04:43:42,832 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 04:44:05,989 src.data.pipeline Pipeline complete — train: 5031 days, 75 assets; test: 1258 days, 45 assets
+2026-03-25 04:44:06,060 v5_30 n_assets=30, Intersection: 34 assets
+2026-03-25 04:44:06,297 v5_30 Train: 5031 days, 34 assets
+2026-03-25 04:44:06,297 v5_30 ============================================================
+2026-03-25 04:44:06,297 v5_30 TRAINING: PPO_n30_mw05_1M
+2026-03-25 04:44:07,123 src.rl.agent Training PPOModel agent (PPO, reward=composite) for 1000000 timesteps on 34 assets...
+2026-03-25 05:02:12,822 src.rl.agent Training complete.
+2026-03-25 05:02:18,135 v5_30 PPO_n30_mw05_1M: 1092s | Sharpe=0.391 | Ret=33.9% | DD=32.2%
+2026-03-25 05:02:18,377 v5_30 ============================================================
+2026-03-25 05:02:18,377 v5_30 TRAINING: PPO_n30_mw10_1M
+2026-03-25 05:02:18,617 src.rl.agent Training PPOModel agent (PPO, reward=composite) for 1000000 timesteps on 34 assets...

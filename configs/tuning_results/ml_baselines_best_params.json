@@ -1,0 +1,108 @@
+{
+  "description": "Optuna-tuned hyperparameters for all baseline models. Tuned on temporal 3-fold CV (2000-2019). ML models use SmoothedModelWrapper to reduce turnover.",
+  "tuning_date": "2026-03-25",
+  "xgboost": {
+    "cv_sharpe": 1.028,
+    "model_params": {
+      "lookback": 30,
+      "top_k": 40,
+      "max_weight": 0.07,
+      "n_estimators": 50,
+      "max_depth": 2,
+      "learning_rate": 0.0145
+    },
+    "xgb_extra_params": {
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 50,
+      "reg_alpha": 0.544,
+      "reg_lambda": 5.94
+    },
+    "smooth_alpha": 0.15,
+    "rebalance_freq": 17,
+    "train_years": 4,
+    "test_sharpe": 0.633
+  },
+  "lightgbm": {
+    "cv_sharpe": 1.026,
+    "model_params": {
+      "lookback": 40,
+      "top_k": 50,
+      "max_weight": 0.05,
+      "n_estimators": 50,
+      "max_depth": 4,
+      "learning_rate": 0.0108
+    },
+    "lgb_extra_params": {
+      "subsample": 0.9,
+      "colsample_bytree": 0.7,
+      "num_leaves": 27,
+      "min_child_samples": 170,
+      "reg_alpha": 1.74,
+      "reg_lambda": 9.82
+    },
+    "smooth_alpha": 0.15,
+    "rebalance_freq": 21,
+    "train_years": 4,
+    "test_sharpe": 0.621
+  },
+  "lstm": {
+    "cv_sharpe": 1.259,
+    "model_params": {
+      "seq_len": 15,
+      "top_k": 40,
+      "max_weight": 0.07,
+      "hidden_size": 64,
+      "num_layers": 3,
+      "dropout": 0.25,
+      "epochs": 5,
+      "batch_size": 256,
+      "learning_rate": 0.00342
+    },
+    "smooth_alpha": 0.25,
+    "rebalance_freq": 21,
+    "train_years": 4,
+    "test_sharpe": 0.908
+  },
+  "transformer": {
+    "cv_sharpe": 1.206,
+    "model_params": {
+      "seq_len": 25,
+      "top_k": 40,
+      "max_weight": 0.07,
+      "d_model": 32,
+      "nhead": 4,
+      "num_layers": 2,
+      "dim_feedforward": 64,
+      "dropout": 0.4,
+      "epochs": 20,
+      "batch_size": 1024,
+      "learning_rate": 0.00438
+    },
+    "smooth_alpha": 0.10,
+    "rebalance_freq": 17,
+    "train_years": 2,
+    "test_sharpe": 0.647
+  },
+  "mean_variance": {
+    "cv_sharpe": 1.499,
+    "model_params": {
+      "lookback": 105,
+      "max_weight": 0.08,
+      "risk_aversion": 2.25,
+      "shrinkage": 0.8,
+      "min_history": 30
+    },
+    "rebalance_freq": 5,
+    "test_sharpe": 0.963
+  },
+  "risk_parity": {
+    "cv_sharpe": 1.234,
+    "model_params": {
+      "vol_lookback": 80,
+      "min_history": 30
+    },
+    "rebalance_freq": 21,
+    "test_sharpe": 0.700
+  }
+}

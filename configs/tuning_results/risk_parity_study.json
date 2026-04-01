@@ -1,0 +1,198 @@
+{
+  "model": "risk_parity",
+  "best_sharpe_cv": 1.2341648399028318,
+  "best_params": {
+    "vol_lookback": 80,
+    "min_history": 30,
+    "rebalance_freq": 21
+  },
+  "n_trials": 20,
+  "n_folds": 3,
+  "all_trials": [
+    {
+      "number": 0,
+      "value": 1.2234025677886662,
+      "params": {
+        "vol_lookback": 100,
+        "min_history": 60,
+        "rebalance_freq": 17
+      }
+    },
+    {
+      "number": 1,
+      "value": 1.2065901033244277,
+      "params": {
+        "vol_lookback": 160,
+        "min_history": 15,
+        "rebalance_freq": 5
+      }
+    },
+    {
+      "number": 2,
+      "value": 0.0,
+      "params": {
+        "vol_lookback": 30,
+        "min_history": 55,
+        "rebalance_freq": 17
+      }
+    },
+    {
+      "number": 3,
+      "value": 1.2105949089354706,
+      "params": {
+        "vol_lookback": 180,
+        "min_history": 10,
+        "rebalance_freq": 21
+      }
+    },
+    {
+      "number": 4,
+      "value": 1.2096470328492217,
+      "params": {
+        "vol_lookback": 210,
+        "min_history": 20,
+        "rebalance_freq": 5
+      }
+    },
+    {
+      "number": 5,
+      "value": 1.2301334565364765,
+      "params": {
+        "vol_lookback": 60,
+        "min_history": 25,
+        "rebalance_freq": 13
+      }
+    },
+    {
+      "number": 6,
+      "value": 1.2165227974618038,
+      "params": {
+        "vol_lookback": 120,
+        "min_history": 25,
+        "rebalance_freq": 17
+      }
+    },
+    {
+      "number": 7,
+      "value": 1.2285179257161605,
+      "params": {
+        "vol_lookback": 50,
+        "min_history": 25,
+        "rebalance_freq": 9
+      }
+    },
+    {
+      "number": 8,
+      "value": 1.2168127401850786,
+      "params": {
+        "vol_lookback": 120,
+        "min_history": 50,
+        "rebalance_freq": 5
+      }
+    },
+    {
+      "number": 9,
+      "value": 1.2120091638311619,
+      "params": {
+        "vol_lookback": 140,
+        "min_history": 40,
+        "rebalance_freq": 5
+      }
+    },
+    {
+      "number": 10,
+      "value": 1.2321296796622063,
+      "params": {
+        "vol_lookback": 80,
+        "min_history": 35,
+        "rebalance_freq": 13
+      }
+    },
+    {
+      "number": 11,
+      "value": 1.2318905007806273,
+      "params": {
+        "vol_lookback": 70,
+        "min_history": 35,
+        "rebalance_freq": 13
+      }
+    },
+    {
+      "number": 12,
+      "value": 1.2341173089410813,
+      "params": {
+        "vol_lookback": 80,
+        "min_history": 40,
+        "rebalance_freq": 13
+      }
+    },
+    {
+      "number": 13,
+      "value": 1.2202609206337403,
+      "params": {
+        "vol_lookback": 250,
+        "min_history": 40,
+        "rebalance_freq": 13
+      }
+    },
+    {
+      "number": 14,
+      "value": 1.226745155411055,
+      "params": {
+        "vol_lookback": 90,
+        "min_history": 45,
+        "rebalance_freq": 9
+      }
+    },
+    {
+      "number": 15,
+      "value": 0.0,
+      "params": {
+        "vol_lookback": 20,
+        "min_history": 35,
+        "rebalance_freq": 9
+      }
+    },
+    {
+      "number": 16,
+      "value": 1.2341648399028318,
+      "params": {
+        "vol_lookback": 80,
+        "min_history": 30,
+        "rebalance_freq": 21
+      }
+    },
+    {
+      "number": 17,
+      "value": 1.228914477515206,
+      "params": {
+        "vol_lookback": 40,
+        "min_history": 30,
+        "rebalance_freq": 21
+      }
+    },
+    {
+      "number": 18,
+      "value": 1.2249987653703018,
+      "params": {
+        "vol_lookback": 100,
+        "min_history": 45,
+        "rebalance_freq": 21
+      }
+    },
+    {
+      "number": 19,
+      "value": 1.2082498758350861,
+      "params": {
+        "vol_lookback": 150,
+        "min_history": 30,
+        "rebalance_freq": 17
+      }
+    }
+  ],
+  "param_importance": {
+    "vol_lookback": 0.9987608807818487,
+    "min_history": 0.0011537436309905207,
+    "rebalance_freq": 8.537558716074913e-05
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "model": "transformer",
+  "best_sharpe_cv": 1.2060502209763586,
+  "best_params": {
+    "d_model": 32,
+    "nhead": 4,
+    "seq_len": 25,
+    "top_k": 40,
+    "max_weight": 0.07,
+    "num_layers": 2,
+    "dim_feedforward": 64,
+    "dropout": 0.4,
+    "epochs": 20,
+    "batch_size": 1024,
+    "learning_rate": 0.004376407912122065,
+    "rebalance_freq": 17,
+    "train_years": 2,
+    "smooth_alpha": 0.1
+  },
+  "n_trials": 25,
+  "n_folds": 3,
+  "all_trials": [
+    {
+      "number": 0,
+      "value": 0.7415251896773128,
+      "params": {
+        "d_model": 64,
+        "nhead": 2,
+        "seq_len": 15,
+        "top_k": 15,
+        "max_weight": 0.03,
+        "num_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.5,
+        "epochs": 25,
+        "batch_size": 256,
+        "learning_rate": 0.0007060886961125453,
+        "rebalance_freq": 17,
+        "train_years": 3,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 1,
+      "value": 0.825680592167115,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 25,
+        "top_k": 45,
+        "max_weight": 0.04,
+        "num_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.15000000000000002,
+        "epochs": 5,
+        "batch_size": 512,
+        "learning_rate": 0.000706827125296226,
+        "rebalance_freq": 13,
+        "train_years": 4,
+        "smooth_alpha": 0.25
+      }
+    },
+    {
+      "number": 2,
+      "value": 1.0827521836091647,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 15,
+        "top_k": 35,
+        "max_weight": 0.05,
+        "num_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.4,
+        "epochs": 25,
+        "batch_size": 1024,
+        "learning_rate": 0.0003848094313674959,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 3,
+      "value": 0.8866033504617938,
+      "params": {
+        "d_model": 32,
+        "nhead": 2,
+        "seq_len": 15,
+        "top_k": 30,
+        "max_weight": 0.04,
+        "num_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.15000000000000002,
+        "epochs": 5,
+        "batch_size": 256,
+        "learning_rate": 0.0026272231569878252,
+        "rebalance_freq": 13,
+        "train_years": 3,
+        "smooth_alpha": 0.15000000000000002
+      }
+    },
+    {
+      "number": 4,
+      "value": 1.023145297520685,
+      "params": {
+        "d_model": 32,
+        "nhead": 2,
+        "seq_len": 20,
+        "top_k": 20,
+        "max_weight": 0.08,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.4,
+        "epochs": 20,
+        "batch_size": 512,
+        "learning_rate": 0.001305634774638585,
+        "rebalance_freq": 17,
+        "train_years": 2,
+        "smooth_alpha": 0.1
+      }
+    },
+    {
+      "number": 5,
+      "value": 0.48925876483129277,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 40,
+        "top_k": 20,
+        "max_weight": 0.06,
+        "num_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.15000000000000002,
+        "epochs": 25,
+        "batch_size": 1024,
+        "learning_rate": 0.0028779747344875074,
+        "rebalance_freq": 13,
+        "train_years": 4,
+        "smooth_alpha": 0.30000000000000004
+      }
+    },
+    {
+      "number": 6,
+      "value": 0.766825327842347,
+      "params": {
+        "d_model": 64,
+        "nhead": 2,
+        "seq_len": 15,
+        "top_k": 25,
+        "max_weight": 0.09,
+        "num_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.15000000000000002,
+        "epochs": 5,
+        "batch_size": 512,
+        "learning_rate": 0.0012912339229913406,
+        "rebalance_freq": 21,
+        "train_years": 3,
+        "smooth_alpha": 0.5
+      }
+    },
+    {
+      "number": 7,
+      "value": 1.020542709902469,
+      "params": {
+        "d_model": 32,
+        "nhead": 2,
+        "seq_len": 15,
+        "top_k": 10,
+        "max_weight": 0.07,
+        "num_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.2,
+        "epochs": 5,
+        "batch_size": 512,
+        "learning_rate": 0.001987784193692206,
+        "rebalance_freq": 21,
+        "train_years": 2,
+        "smooth_alpha": 0.4
+      }
+    },
+    {
+      "number": 8,
+      "value": 0.974653054323991,
+      "params": {
+        "d_model": 64,
+        "nhead": 2,
+        "seq_len": 10,
+        "top_k": 45,
+        "max_weight": 0.05,
+        "num_layers": 1,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "epochs": 15,
+        "batch_size": 512,
+        "learning_rate": 0.002095765399899297,
+        "rebalance_freq": 17,
+        "train_years": 4,
+        "smooth_alpha": 0.15000000000000002
+      }
+    },
+    {
+      "number": 9,
+      "value": 0.8005505408557682,
+      "params": {
+        "d_model": 32,
+        "nhead": 2,
+        "seq_len": 15,
+        "top_k": 35,
+        "max_weight": 0.09,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.5,
+        "epochs": 25,
+        "batch_size": 256,
+        "learning_rate": 0.0023127532143341384,
+        "rebalance_freq": 21,
+        "train_years": 4,
+        "smooth_alpha": 0.45000000000000007
+      }
+    },
+    {
+      "number": 10,
+      "value": 0.8534841993667017,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 35,
+        "top_k": 35,
+        "max_weight": 0.06,
+        "num_layers": 1,
+        "dim_feedforward": 256,
+        "dropout": 0.35,
+        "epochs": 15,
+        "batch_size": 1024,
+        "learning_rate": 0.0003237847808129314,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.30000000000000004
+      }
+    },
+    {
+      "number": 11,
+      "value": 0.8950611985214151,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 25,
+        "top_k": 25,
+        "max_weight": 0.08,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.4,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.0003673683663114457,
+        "rebalance_freq": 17,
+        "train_years": 2,
+        "smooth_alpha": 0.1
+      }
+    },
+    {
+      "number": 12,
+      "value": 1.2060502209763586,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 25,
+        "top_k": 40,
+        "max_weight": 0.07,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.4,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.004376407912122065,
+        "rebalance_freq": 17,
+        "train_years": 2,
+        "smooth_alpha": 0.1
+      }
+    },
+    {
+      "number": 13,
+      "value": 1.0983694351216287,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 30,
+        "top_k": 50,
+        "max_weight": 0.07,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.30000000000000004,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.00480184138037005,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 14,
+      "value": 1.0625013676254758,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 30,
+        "top_k": 50,
+        "max_weight": 0.1,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.25,
+        "epochs": 15,
+        "batch_size": 1024,
+        "learning_rate": 0.004529963722037483,
+        "rebalance_freq": 17,
+        "train_years": 2,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 15,
+      "value": 1.0155092851213103,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 30,
+        "top_k": 50,
+        "max_weight": 0.07,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.30000000000000004,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.00481052402640884,
+        "rebalance_freq": 17,
+        "train_years": 3,
+        "smooth_alpha": 0.1
+      }
+    },
+    {
+      "number": 16,
+      "value": 0.7514771377146352,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 30,
+        "top_k": 40,
+        "max_weight": 0.08,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.30000000000000004,
+        "epochs": 10,
+        "batch_size": 1024,
+        "learning_rate": 0.003589831075024996,
+        "rebalance_freq": 13,
+        "train_years": 3,
+        "smooth_alpha": 0.35
+      }
+    },
+    {
+      "number": 17,
+      "value": 0.8767152557362593,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 35,
+        "top_k": 45,
+        "max_weight": 0.07,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.45000000000000007,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.0035443985010184947,
+        "rebalance_freq": 21,
+        "train_years": 2,
+        "smooth_alpha": 0.25
+      }
+    },
+    {
+      "number": 18,
+      "value": 0.8623738911685886,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 25,
+        "top_k": 40,
+        "max_weight": 0.06,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.35,
+        "epochs": 10,
+        "batch_size": 1024,
+        "learning_rate": 0.0016799221432156636,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.15000000000000002
+      }
+    },
+    {
+      "number": 19,
+      "value": 0.9039045647753549,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 40,
+        "top_k": 50,
+        "max_weight": 0.1,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.25,
+        "epochs": 15,
+        "batch_size": 1024,
+        "learning_rate": 0.000829567763303861,
+        "rebalance_freq": 17,
+        "train_years": 3,
+        "smooth_alpha": 0.25
+      }
+    },
+    {
+      "number": 20,
+      "value": 1.0806580580818281,
+      "params": {
+        "d_model": 32,
+        "nhead": 4,
+        "seq_len": 35,
+        "top_k": 40,
+        "max_weight": 0.05,
+        "num_layers": 2,
+        "dim_feedforward": 64,
+        "dropout": 0.35,
+        "epochs": 20,
+        "batch_size": 256,
+        "learning_rate": 0.003770562552587944,
+        "rebalance_freq": 17,
+        "train_years": 2,
+        "smooth_alpha": 0.15000000000000002
+      }
+    },
+    {
+      "number": 21,
+      "value": 1.0382881865696874,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 20,
+        "top_k": 35,
+        "max_weight": 0.05,
+        "num_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.4,
+        "epochs": 25,
+        "batch_size": 1024,
+        "learning_rate": 0.0004949276575950162,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 22,
+      "value": 0.8674786611544117,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 10,
+        "top_k": 30,
+        "max_weight": 0.06,
+        "num_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.45000000000000007,
+        "epochs": 25,
+        "batch_size": 1024,
+        "learning_rate": 0.0009173528044474519,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.2
+      }
+    },
+    {
+      "number": 23,
+      "value": 1.0517903177852006,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 20,
+        "top_k": 40,
+        "max_weight": 0.04,
+        "num_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.45000000000000007,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.0004697550459827401,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.1
+      }
+    },
+    {
+      "number": 24,
+      "value": 1.1173022160106638,
+      "params": {
+        "d_model": 64,
+        "nhead": 4,
+        "seq_len": 25,
+        "top_k": 45,
+        "max_weight": 0.07,
+        "num_layers": 1,
+        "dim_feedforward": 64,
+        "dropout": 0.25,
+        "epochs": 20,
+        "batch_size": 1024,
+        "learning_rate": 0.00499815091188889,
+        "rebalance_freq": 13,
+        "train_years": 2,
+        "smooth_alpha": 0.35
+      }
+    }
+  ],
+  "param_importance": {
+    "learning_rate": 0.30028157898121205,
+    "train_years": 0.18926371060769343,
+    "num_layers": 0.10956987869411003,
+    "smooth_alpha": 0.0890592799431752,
+    "seq_len": 0.07745883706966439,
+    "top_k": 0.07218191098816941,
+    "dropout": 0.0627411520439377,
+    "epochs": 0.03300062808304926,
+    "dim_feedforward": 0.020260048938233237,
+    "max_weight": 0.01751944277394634,
+    "batch_size": 0.012975987491139403,
+    "d_model": 0.010607053909911152,
+    "nhead": 0.0031926873542889285,
+    "rebalance_freq": 0.001887803121469402
+  }
+}

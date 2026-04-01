@@ -1,0 +1,10 @@
+{
+  "risk_parity": {
+    "best_sharpe_cv": 1.2341648399028318,
+    "best_params": {
+      "vol_lookback": 80,
+      "min_history": 30,
+      "rebalance_freq": 21
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "algorithm": "PPO",
+  "status": "completed — 35 Optuna trials (302 min)",
+  "best_sharpe": 0.4853,
+  "best_trial": 31,
+  "best_params_decoded": {
+    "learning_rate": 3.47e-4,
+    "gamma": 0.982,
+    "clip_range": 0.3,
+    "n_steps": 512,
+    "batch_size": 32,
+    "n_epochs": 10,
+    "ent_coef": 8.06e-4,
+    "gae_lambda": 0.976,
+    "vf_coef": 0.468,
+    "max_grad_norm": 0.508,
+    "hidden_size": 256,
+    "total_timesteps": 400000,
+    "reward_type": "return",
+    "activation_fn": "Tanh",
+    "use_vec_normalize": true
+  },
+  "best_validation_metrics": {
+    "cumulative_return": 0.2874,
+    "max_drawdown": 0.1817,
+    "n_val_days": 1490
+  },
+  "best_params_raw": {
+    "learning_rate": 0.0003473388501242811,
+    "one_minus_gamma": 0.01780135403357345,
+    "clip_range": 0.3,
+    "n_steps_pow": 9,
+    "batch_size_pow": 5,
+    "n_epochs": 10,
+    "ent_coef": 0.0008062688765483161,
+    "one_minus_gae": 0.02363930642751214,
+    "vf_coef": 0.46830458852937334,
+    "max_grad_norm": 0.5081023636086968,
+    "hidden_size": 256,
+    "total_timesteps": 400000,
+    "reward_type": "return"
+  },
+  "n_trials": 35,
+  "param_importance_fanova": {
+    "max_grad_norm": 0.353,
+    "gamma": 0.268,
+    "hidden_size": 0.111,
+    "learning_rate": 0.062,
+    "batch_size": 0.061,
+    "n_steps": 0.056,
+    "gae_lambda": 0.032,
+    "vf_coef": 0.026,
+    "clip_range": 0.010,
+    "ent_coef": 0.009,
+    "n_epochs": 0.007,
+    "reward_type": 0.004,
+    "total_timesteps": 0.002
+  },
+  "key_findings": {
+    "most_important_params": "max_grad_norm (35.3%) and gamma (26.8%) dominate PPO performance",
+    "arch_256_essential": "All positive-Sharpe trials used hidden_size=256; 64/128 consistently failed",
+    "reward_return_better": "reward_type='return' consistently beat 'sharpe' for PPO",
+    "higher_lr_works": "Optuna best lr=3.47e-4, much higher than FinRL/ElegantRL literature suggests",
+    "wider_clipping": "clip_range=0.3 outperformed tighter 0.1/0.2 — opposite of initial hypothesis"
+  },
+  "search_ranges": {
+    "learning_rate": "[1e-5, 5e-4] log-scale",
+    "gamma": "[0.95, 0.999] via 1-suggest_float",
+    "clip_range": "[0.1, 0.2, 0.3] categorical",
+    "n_steps": "[256, 2048] powers of 2",
+    "batch_size": "[32, 128] powers of 2",
+    "n_epochs": "[3, 5, 10] categorical",
+    "ent_coef": "[1e-4, 0.05] log-scale",
+    "gae_lambda": "[0.9, 0.99] via 1-suggest_float",
+    "vf_coef": "[0.25, 1.0] uniform",
+    "max_grad_norm": "[0.3, 1.0] uniform",
+    "hidden_size": "[64, 128, 256] categorical",
+    "total_timesteps": "[150K, 400K] step=50K"
+  },
+  "literature_justification": {
+    "learning_rate": "FinRL: 2.5e-4; ElegantRL: 3e-5. Optuna found 3.5e-4 — higher than literature for this env.",
+    "gamma": "FinRL default: 0.99. Optuna found 0.982 — slightly lower discount works better.",
+    "clip_range": "Schulman 2017: 0.2. Optuna found 0.3 — wider clipping better for portfolio task.",
+    "n_steps": "FinRL: 2048. Optuna found 512 — shorter rollouts with more updates.",
+    "ent_coef": "FinRL: 0.01. Optuna found 8e-4 — much lower; focused policy preferred.",
+    "gae_lambda": "Schulman 2016 GAE: 0.95. Optuna found 0.976 — higher for this env.",
+    "total_timesteps": "FinRL: 100K+. MDPI 2024: 10M. Optuna: 400K optimal for 50-asset tuning subset.",
+    "vec_normalize": "Always ON — '37 Impl Details' (ICLR 2022): most impactful PPO trick.",
+    "network": "[256,256] with Tanh activation — matches '37 Impl Details' recommendation."
+  },
+  "sources": [
+    "FinRL (AI4Finance-Foundation) — github.com/AI4Finance-Foundation/FinRL",
+    "ElegantRL — github.com/AI4Finance-Foundation/ElegantRL",
+    "37 Implementation Details of PPO (ICLR Blog Track 2022)",
+    "SB3 RL Baselines Zoo — hyperparameter optimization module",
+    "Schulman et al. (2017) — Proximal Policy Optimization Algorithms",
+    "Schulman et al. (2016) — High-Dimensional Continuous Control Using GAE",
+    "MDPI Algorithms 2024 — Systematic Portfolio Optimization with RL"
+  ]
+}

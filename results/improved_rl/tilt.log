@@ -1,0 +1,61 @@
+2026-03-25 05:16:08,710 src.data.pipeline Building data pipeline...
+2026-03-25 05:16:08,710 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 05:16:09,725 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 05:16:09,725 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 05:16:10,801 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 05:16:10,801 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 05:16:11,247 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 05:16:11,247 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 05:16:11,701 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 05:16:11,701 src.data.pipeline Validating data integrity...
+2026-03-25 05:16:13,920 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 05:16:13,920 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 05:16:13,933 src.data.pipeline 18 assets in prices but not in presence matrix: ['seasonality', 'value', 'short_term_reversal', 'accruals', 'mkt-rf']...
+2026-03-25 05:16:13,933 src.data.pipeline Validation passed.
+2026-03-25 05:16:13,992 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 05:16:23,463 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 05:16:49,223 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 05:16:49,297 tilt Intersection: 115 assets
+2026-03-25 05:16:49,535 tilt Using 115 assets
+2026-03-25 05:16:49,535 tilt ============================================================
+2026-03-25 05:16:49,535 tilt TRAINING: TiltPPO_ts03_1M
+2026-03-25 05:16:50,735 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 05:48:27,678 src.rl.agent Training complete.
+2026-03-25 05:48:35,356 tilt TiltPPO_ts03_1M: 1906s | Sharpe=0.666 | Ret=77.9% | DD=33.9% | Sortino=0.812
+2026-03-25 05:48:35,370 tilt ============================================================
+2026-03-25 05:48:35,370 tilt TRAINING: TiltPPO_ts05_1M
+2026-03-25 05:48:35,716 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 06:20:20,659 src.rl.agent Training complete.
+2026-03-25 06:20:27,471 tilt TiltPPO_ts05_1M: 1912s | Sharpe=0.622 | Ret=70.2% | DD=33.4% | Sortino=0.761
+2026-03-25 06:20:27,478 tilt ============================================================
+2026-03-25 06:20:27,478 tilt TRAINING: TiltPPO_ts08_1M
+2026-03-25 06:20:27,808 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 06:43:23,658 src.rl.agent Training complete.
+2026-03-25 06:43:30,431 tilt TiltPPO_ts08_1M: 1383s | Sharpe=0.517 | Ret=53.1% | DD=34.7% | Sortino=0.631
+2026-03-25 06:43:30,438 tilt ============================================================
+2026-03-25 06:43:30,438 tilt TRAINING: TiltPPO_ts10_1M
+2026-03-25 06:43:30,765 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 07:06:48,096 src.rl.agent Training complete.
+2026-03-25 07:06:54,909 tilt TiltPPO_ts10_1M: 1404s | Sharpe=0.366 | Ret=31.2% | DD=33.3% | Sortino=0.449
+2026-03-25 07:06:54,925 tilt Best tilt_scale: 0.3 (Sharpe=0.666)
+2026-03-25 07:06:54,925 tilt ============================================================
+2026-03-25 07:06:54,925 tilt TRAINING: TiltPPO_ts03_sharpe_1M
+2026-03-25 07:06:55,258 src.rl.agent Training TiltPPO agent (PPO, reward=sharpe) for 1000000 timesteps on 115 assets...
+2026-03-25 07:30:33,404 src.rl.agent Training complete.
+2026-03-25 07:30:40,209 tilt TiltPPO_ts03_sharpe_1M: 1425s | Sharpe=0.658 | Ret=76.4% | DD=34.0% | Sortino=0.799
+2026-03-25 07:30:40,217 tilt ============================================================
+2026-03-25 07:30:40,217 tilt TRAINING: TiltPPO_ts03_2M
+2026-03-25 07:30:40,545 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 2000000 timesteps on 115 assets...
+2026-03-25 08:31:32,879 src.rl.agent Training complete.
+2026-03-25 08:31:40,670 tilt TiltPPO_ts03_2M: 3660s | Sharpe=0.659 | Ret=76.9% | DD=33.7% | Sortino=0.799
+
+==========================================================================================
+TILT PPO RESULTS (115 assets, residual policy on EW baseline)
+==========================================================================================
+  TiltPPO_ts03_1M                     | Sharpe=  0.666 | Ret=   77.94% | DD=  33.86%
+  TiltPPO_ts03_2M                     | Sharpe=  0.659 | Ret=   76.85% | DD=  33.70%
+  TiltPPO_ts03_sharpe_1M              | Sharpe=  0.658 | Ret=   76.42% | DD=  34.00%
+  TiltPPO_ts05_1M                     | Sharpe=  0.622 | Ret=   70.25% | DD=  33.40%
+  TiltPPO_ts08_1M                     | Sharpe=  0.517 | Ret=   53.12% | DD=  34.66%
+  TiltPPO_ts10_1M                     | Sharpe=  0.366 | Ret=   31.19% | DD=  33.31%
+==========================================================================================

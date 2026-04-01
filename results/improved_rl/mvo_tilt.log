@@ -1,0 +1,25 @@
+2026-03-25 09:04:22,327 __main__ Loading data (n_assets=100)...
+2026-03-25 09:04:22,327 src.data.pipeline Building data pipeline...
+2026-03-25 09:04:22,327 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 09:04:22,975 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 09:04:22,976 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 09:04:23,842 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 09:04:23,842 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 09:04:24,512 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 09:04:24,512 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 09:04:25,222 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 09:04:25,223 src.data.pipeline Validating data integrity...
+2026-03-25 09:04:27,148 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 09:04:27,149 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 09:04:27,161 src.data.pipeline 18 assets in prices but not in presence matrix: ['spx', 'momentum', 'seasonality', 'profit_growth', 'low_risk']...
+2026-03-25 09:04:27,161 src.data.pipeline Validation passed.
+2026-03-25 09:04:27,215 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 09:04:36,485 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 09:05:02,542 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 09:05:02,623 __main__ Intersection: 115 assets
+2026-03-25 09:05:02,899 __main__ Train: 5031 days, 115 assets
+2026-03-25 09:05:02,899 __main__ ============================================================
+2026-03-25 09:05:02,900 __main__ TRAINING: MVOTilt_ts05_1M
+2026-03-25 09:05:03,260 __main__ Pre-computing MVO weights for 5031 days, 115 assets...
+2026-03-25 09:18:27,825 __main__ MVO pre-computation done: 804.6s
+2026-03-25 09:18:29,488 src.rl.agent Training MVOTiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...

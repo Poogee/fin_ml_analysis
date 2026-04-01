@@ -1,0 +1,90 @@
+{
+  "algorithm": "DQN",
+  "status": "completed — 35 Optuna trials (168 min)",
+  "best_sharpe": 1.0309,
+  "best_trial": 12,
+  "best_params_decoded": {
+    "learning_rate": 2.08e-5,
+    "gamma": 0.996,
+    "buffer_size": 16724,
+    "batch_size": 64,
+    "target_update_interval": 679,
+    "exploration_fraction": 0.296,
+    "exploration_final_eps": 0.073,
+    "learning_starts": 1636,
+    "hidden_size": 64,
+    "total_timesteps": 400000,
+    "reward_type": "sharpe",
+    "activation_fn": "Tanh"
+  },
+  "best_validation_metrics": {
+    "cumulative_return": 0.6686,
+    "max_drawdown": 0.1232,
+    "n_val_days": 1490
+  },
+  "best_params_raw": {
+    "learning_rate": 2.0810060317151663e-05,
+    "one_minus_gamma": 0.0043787632821536485,
+    "buffer_size": 16724,
+    "batch_size_pow": 6,
+    "target_update_interval": 679,
+    "exploration_fraction": 0.2958789250122936,
+    "exploration_final_eps": 0.07308061340465384,
+    "learning_starts": 1636,
+    "hidden_size": 64,
+    "total_timesteps": 400000,
+    "reward_type": "sharpe"
+  },
+  "n_trials": 35,
+  "param_importance_fanova": {
+    "reward_type": 0.372,
+    "exploration_final_eps": 0.142,
+    "gamma": 0.104,
+    "batch_size": 0.093,
+    "hidden_size": 0.085,
+    "learning_starts": 0.059,
+    "target_update_interval": 0.046,
+    "buffer_size": 0.042,
+    "learning_rate": 0.027,
+    "total_timesteps": 0.017,
+    "exploration_fraction": 0.015
+  },
+  "key_findings": {
+    "most_important_param": "reward_type is overwhelmingly most important (37.2%) — 'sharpe' >> 'return' for DQN",
+    "small_network_wins": "hidden_size=64 consistently outperforms 128/256 for discrete DQN (opposite of PPO)",
+    "very_low_lr": "Optimal lr=2.1e-5, much lower than Nature DQN 1e-4 and PPO 3.5e-4",
+    "high_gamma": "gamma=0.996 — DQN benefits from longer-horizon discount than PPO (0.982)",
+    "small_buffer": "buffer_size=17K — much smaller than FinRL 50K; fresh data matters more",
+    "dqn_outperforms_ppo": "DQN Sharpe 1.031 >> PPO Sharpe 0.485 on validation set",
+    "consistent_high_performance": "20 out of 35 DQN trials achieved Sharpe > 0.5"
+  },
+  "search_ranges": {
+    "learning_rate": "[1e-5, 5e-4] log-scale",
+    "gamma": "[0.95, 0.999]",
+    "buffer_size": "[10K, 100K] log-scale",
+    "batch_size": "[32, 256] powers of 2",
+    "target_update_interval": "[200, 2000] log-scale",
+    "exploration_fraction": "[0.1, 0.4] uniform",
+    "exploration_final_eps": "[0.01, 0.1] uniform",
+    "learning_starts": "[500, 5000] log-scale",
+    "hidden_size": "[64, 128, 256] categorical",
+    "total_timesteps": "[100K, 400K] step=50K"
+  },
+  "literature_justification": {
+    "learning_rate": "Nature DQN: 1e-4. Optuna found 2.1e-5 — 5x lower for noisy financial data.",
+    "gamma": "Standard: 0.99. Optuna found 0.996 — DQN benefits from very high discount.",
+    "buffer_size": "FinRL DDPG: 50K. Optuna: 17K — smaller buffer keeps data fresh in non-stationary markets.",
+    "target_update_interval": "Arxiv 2411.07585: 1000. Optuna: 679 — more frequent target updates.",
+    "exploration_fraction": "Moderate 0.3 — extended exploration for non-stationary markets.",
+    "reward_type": "Sharpe-based reward dominates (37% importance). Moody & Saffell (1998 NeurIPS) confirmed.",
+    "total_timesteps": "Previous 50K was far too low. Optuna: 400K — 8x increase."
+  },
+  "sources": [
+    "Mnih et al. (2015) — Human-level Control Through Deep RL (Nature DQN)",
+    "FinRL (AI4Finance-Foundation) — github.com/AI4Finance-Foundation/FinRL",
+    "Arxiv 2411.07585 — RL Framework for Quantitative Trading",
+    "Moody & Saffell (1998 NeurIPS) — Reinforcement Learning for Trading",
+    "SB3 DQN Documentation",
+    "SB3 RL Tips and Tricks"
+  ]
+}

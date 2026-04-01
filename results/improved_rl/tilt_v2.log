@@ -1,0 +1,33 @@
+2026-03-25 07:52:11,004 __main__ Loading data (n_assets=100)...
+2026-03-25 07:52:11,004 src.data.pipeline Building data pipeline...
+2026-03-25 07:52:11,004 src.data.loader Loading prices from /home/poogee/kursach_2/data/top3000_data_df.parquet
+2026-03-25 07:52:11,932 src.data.loader Loaded prices: shape=(11346, 10611), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 07:52:11,932 src.data.loader Loading market_caps from /home/poogee/kursach_2/data/top3000_market_caps.parquet
+2026-03-25 07:52:12,780 src.data.loader Loaded market_caps: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 07:52:12,780 src.data.loader Loading dividends from /home/poogee/kursach_2/data/top3000_dividends.parquet
+2026-03-25 07:52:13,293 src.data.loader Loaded dividends: shape=(11346, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 07:52:13,293 src.data.loader Loading presence from /home/poogee/kursach_2/data/top3000_presence_matrix.parquet
+2026-03-25 07:52:13,771 src.data.loader Loaded presence: shape=(16438, 10593), date range=1979-12-31 00:00:00 to 2024-12-31 00:00:00
+2026-03-25 07:52:13,771 src.data.pipeline Validating data integrity...
+2026-03-25 07:52:15,572 src.data.pipeline 88179 negative/zero prices detected (0.2674% of non-NaN values)
+2026-03-25 07:52:15,573 src.data.pipeline Data covers: prices 1979-12-31–2024-12-31 (11346 days), presence 1979-12-31–2024-12-31 (16438 days)
+2026-03-25 07:52:15,584 src.data.pipeline 18 assets in prices but not in presence matrix: ['low_risk', 'size', 'mkt-rf', 'spx-rf', 'spx_fut']...
+2026-03-25 07:52:15,584 src.data.pipeline Validation passed.
+2026-03-25 07:52:15,648 src.data.pipeline Common assets across all datasets: 10593
+2026-03-25 07:52:24,368 src.data.universe UniverseSelector initialized with 10593 assets
+2026-03-25 07:52:48,342 src.data.pipeline Pipeline complete — train: 5031 days, 274 assets; test: 1258 days, 142 assets
+2026-03-25 07:52:48,414 __main__ Intersection: 115 assets
+2026-03-25 07:52:48,653 __main__ Train: 5031 days, 115 assets
+2026-03-25 07:52:48,654 __main__ ============================================================
+2026-03-25 07:52:48,654 __main__ TRAINING: Tilt_ts10_1M
+2026-03-25 07:52:49,637 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 08:29:52,591 src.rl.agent Training complete.
+2026-03-25 08:30:00,879 __main__ Tilt_ts10_1M: 2232s | Sharpe=0.715 | Ret=87.16% | DD=33.58% | Calmar=0.398 | Sortino=0.869
+2026-03-25 08:30:00,883 __main__ ============================================================
+2026-03-25 08:30:00,883 __main__ TRAINING: Tilt_ts15_1M
+2026-03-25 08:30:01,277 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
+2026-03-25 08:59:20,296 src.rl.agent Training complete.
+2026-03-25 08:59:27,584 __main__ Tilt_ts15_1M: 1767s | Sharpe=0.699 | Ret=84.11% | DD=33.63% | Calmar=0.387 | Sortino=0.850
+2026-03-25 08:59:27,602 __main__ ============================================================
+2026-03-25 08:59:27,602 __main__ TRAINING: Tilt_ts20_1M
+2026-03-25 08:59:27,951 src.rl.agent Training TiltPPO agent (PPO, reward=composite) for 1000000 timesteps on 115 assets...
