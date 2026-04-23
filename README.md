@@ -13,8 +13,7 @@
 ## Данные
 Данные (parquet, ~3 ГБ) не включены в репозиторий. Положите файлы в `data/`.
 
-## Запуск
+## Пример запуска
 ```bash
 python -m src.rl.train_meta_v3  # обучение Meta-RL
-typst compile report/main.typ   # компиляция отчета
 ```
